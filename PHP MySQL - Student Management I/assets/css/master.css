@@ -18,3 +18,24 @@ html,body{background: whitesmoke;}
 .index-ip{
   width: 50%;
 }
+.studentTitle{
+  background: royalblue;
+  color: white;
+  text-align: center;
+}
+.students:nth-child(odd)
+{
+background: lightgrey;
+text-align: center;
+}
+.students:nth-child(even)
+{
+background: white;
+text-align: center;
+}
+.margin-left-10{
+  margin-left: 10px;
+}
+.margin-right-10{
+  margin-right: 10px;
+}
