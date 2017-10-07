@@ -2,7 +2,7 @@
 A repo having some projects that are assigned in schools and projects
 
 # Projects
-1. <b>PHP MySQL - Student Management</b>
+1. <b>PHP MySQL - Student Management</b><br>
 What You Need `Apache Server` and  `MySQL Server` <br>
 How To Use
 <ul>
