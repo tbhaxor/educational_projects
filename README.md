@@ -15,7 +15,7 @@ How To Use<br>
 <img src="https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/PHP%20MySQL%20-%20Student%20Management%20I/SS.PNG"><br><hr>
 2. <b>PHP MySQL - Student Management II</b><br>
 What You Need `Apache Server` and  `MySQL Server` <br>
-Features `None` <br>
+Features `OOPS Style` and `Security Increased By Level 1`<br>
 How To Use<br>
 &bull; Create A Database Named 'test'<br>
 &bull; Import the two SQL file<br>
@@ -23,6 +23,8 @@ How To Use<br>
 &bull; Enjoy :D<br><br>
 <b>Contact Me <a href="#my-contact-info">here</a></b><br><br>
 <b>Screen Shot</b><br>
+<img src="https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/PHP%20MySQL%20-%20Student%20Management%20I/SS.PNG"><br><hr>
+
 # My Contact Info
 <b>Face Book : https://facebook.com/gurkirat.py</b><br>
 <b>Email Address : tbhaxor@gmail.com</b>
