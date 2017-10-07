@@ -17,10 +17,10 @@ if(isset($_POST['login']))
     $name = $_POST['inuser'];
     $pass = $_POST['inpass'];
     $sql = "SELECT * FROM `stumanage_users` WHERE name='$name' and passwd='$pass'";
-    $result = @mysqli_query($connection,$sql);
+    $result = $connection->query($sql);
     if($result)
     {
-      $row  = mysqli_fetch_assoc($result);
+      $row = $result->fetch_assoc();
       if($row)
       {
         $_SESSION['slogin'] = true;
@@ -35,7 +35,7 @@ if(isset($_POST['login']))
     {
       echo "<script>alert('Error : Can\'t Run Query');</script>";
     }
-    mysqli_close($connection);
+    $connection->close();
   }
   else
   {
@@ -60,7 +60,7 @@ if($connection)
   $pass = str_replace(">","&gt;",$pass);
   $pass = str_replace(">","&gt;",$pass);
   $sql = "INSERT INTO `stumanage_users`(`name`, `passwd`) VALUES ('$name','$pass')";
-  $result = @mysqli_query($connection,$sql);
+  $result = $connection->query($sql);
   if($result)
   {
       echo "<script>alert('Error : User $name is registered');</script>";
@@ -69,7 +69,7 @@ if($connection)
   {
     echo "<script>alert('Error : Can\'t Run Query');</script>";
   }
-  mysqli_close($connection);
+  $connection->close();
 }
 else
 {

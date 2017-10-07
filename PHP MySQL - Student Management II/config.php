@@ -3,9 +3,9 @@
     edit this file according to your needs
 */
 
-  $dbhost = "";
+  $dbhost = "localhost";
   $dbname = "test";
-  $dbuser = "";
+  $dbuser = "root";
   $dbpass = "";
 
 ?>
