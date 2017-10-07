@@ -24,7 +24,7 @@ void menu()
 	cout<<"\n\n2. Delete By ROLL NUMBER";
 	cout<<"\n\n3. Modify By ROLL NUMBER";
 	cout<<"\n\n4. List All";
-	cout<<"\n\n5. Quit\n\n->";
+	cout<<"\n\n5. Quit\n\n-> ";
 }
 int main() 
 {
@@ -45,14 +45,14 @@ int main()
 				if(student==NULL)
 				{
 					temp=new Student();
-					cout<<"\n\nenter roll number : ";
+					cout<<"\nenter roll number : ";
 					cin>>temp->roll_no;
 					cin.ignore(1);
-					cout<<"\n\nenter name : ";
+					cout<<"\nenter name : ";
 					getline(cin,temp->name);
-					cout<<"\n\nenter dob (DD/MM/YYY) : ";
+					cout<<"\nenter dob (DD/MM/YYY) : ";
 					getline(cin,temp->dob);
-					cout<<"\n\nenter address : ";
+					cout<<"\nenter address : ";
 					getline(cin,temp->address);
 					temp->next=NULL;
 					student = temp;
@@ -60,10 +60,30 @@ int main()
 				}
 				else
 				{
-					temp
+					
 				}
 				break;
-		}		
+			case 4:
+				if(student==NULL)
+				{
+					system("cls");
+					cout<<"----- Listing All Students ----";
+				}
+				else
+				{
+					temp = new Student();
+					temp = student;
+					while(temp!=NULL)
+					{
+						cout<<temp->roll_no<<endl;
+						temp=temp->next;
+					}
+					delete(temp);
+				}
+				break;
+		}
+	cout<<"\n\n[!] Press Any Key To Continue . . .";
+	system("cls");
 	}
 	return 0;
 }
