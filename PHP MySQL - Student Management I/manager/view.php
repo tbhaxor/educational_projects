@@ -1,10 +1,6 @@
 <html>
 <head>
 <title>Student Management Program</title>
-<script type="text/javascript">
-  getElementById('id')
-  innerHTML
-</script>
 <!--IMPORT STYLESHEET AND SCRIPT-->
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="../assets/css/master.css">
@@ -16,9 +12,29 @@ if(!isset($_GET['id']) or empty(@$_GET['id']))
 }
 $id = $_GET['id'];
 include_once '../dbconnection.php';
-if(isset($_POST['update']))
+if(isset($_POST['update']) and $connection)
 {
-  echo "<script>var a = document.getElementById('update'); a.innerHTML = 'LOLWA';</script>";
+  $roll_no = $_POST['rollno'];
+  $name = $_POST['name'];
+  $dob = $_POST['dob'];
+  $email = $_POST['email'];
+  $cnum = $_POST['cnum'];
+  $fname = $_POST['fname'];
+  $fcnum = $_POST['fcnum'];
+  $mname = $_POST['mname'];
+  $mcnum = $_POST['mcnum'];
+  $addr = $_POST['addr'];
+  $nationality = $_POST['nationality'];
+  $remarks = $_POST['remarks'];
+  if(mysqli_query($connection,"UPDATE `stumanage_students` SET `roll_no`='$roll_no',`name`='$name',`dob`='$dob',`father_name`='$fname',`mother_name`='$mname',`email`='$email',`contact_number`='$cnum',`father_c_number`='$fcnum',`mother_c_number`='$mcnum',`nationality`='$nationality',`address`='$addr',`remarks`='$remarks' WHERE `sno`='$id'"))
+  {
+    echo "<script>alert('ERROR : Successfully Updated');window.location.href='dashboard.php';</script>";
+  }
+  else
+  {
+    echo "<script>alert('ERROR : Not Updated');window.location.href='dashboard.php';</script>";
+  }
+  mysqli_close($connection);
 }
 else
 {
@@ -38,15 +54,15 @@ else
       echo "<div class=form-group><div class=col-xs-3><strong>Father's Name</strong></div><div class=col-xs-4><input type=text name='fname' value=$row[father_name] class=form-control></div></div>";
       echo "<div class=form-group><div class=col-xs-3><strong>Father's Contact Number</strong></div><div class=col-xs-4><input type=text name='fcnum' value=$row[father_c_number] class=form-control></div></div>";
       echo "<div class=form-group><div class=col-xs-3><strong>Mother's Name</strong></div><div class=col-xs-4><input type=text name='mname' value=$row[mother_name] class=form-control></div></div>";
-      echo "<div class=form-group><div class=col-xs-3><strong>Mother's Contact Number</strong></div><div class=col-xs-4><input type=text name='mname' value=$row[mother_c_number] class=form-control></div></div>";
+      echo "<div class=form-group><div class=col-xs-3><strong>Mother's Contact Number</strong></div><div class=col-xs-4><input type=text name='mcnum' value=$row[mother_c_number] class=form-control></div></div>";
       echo "<div class=form-group><div class=col-xs-3><strong>Address</strong></div><div class=col-xs-4><input type=text name='addr' value=$row[address] class=form-control></div></div>";
       echo "<div class=form-group><div class=col-xs-3><strong>Nationality</strong></div><div class=col-xs-4><input type=text name='nationality' value=$row[nationality] class=form-control></div></div>";
-      echo "<div class=form-group><div class=col-xs-3><strong>How $row[name] is performing?</strong></div><div class=col-xs-4><input type=text name='nationality' value=$row[remarks] class=form-control></div></div>";
-      echo "<center><button id='update' class='btn btn-warning btn-lg' style='width:50%'><i class='glyphicon glyphicon-pencil'></i> Update</button></center>";
+      echo "<div class=form-group><div class=col-xs-3><strong>How $row[name] is performing?</strong></div><div class=col-xs-4><input type=text name='remarks' value=$row[remarks] class=form-control></div></div>";
+      echo "<center><button name='update' class='btn btn-warning btn-lg' style='width:50%'><i class='glyphicon glyphicon-pencil'></i> Update</button></center>";
       echo "</div></form>";
     }
     else {
-      echo "<strong>Error : </strong>Can\'t Delete Data";
+      echo "<strong>Error : </strong>Can\'t Fetch Data";
     }
     mysqli_close($connection);
   }

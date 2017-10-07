@@ -16,16 +16,6 @@ if(isset($_POST['login']))
   {
     $name = $_POST['inuser'];
     $pass = $_POST['inpass'];
-    $name = str_replace("<","&lt;",$name);
-    $name = str_replace(">","&gt;",$name);
-    $name = str_replace("'","\\'",$name);
-    $name = str_replace("\"","\\\"",$name);
-    $pass = str_replace("'","\\'",$pass);
-    $pass = str_replace("\"","\\\"",$pass);
-    $pass = str_replace("<","&gt;",$pass);
-    $pass = str_replace(">","&gt;",$pass);
-    $pass = str_replace(">","&gt;",$pass);
-    $pass = str_replace(">","&gt;",$pass);
     $sql = "SELECT * FROM `stumanage_users` WHERE name='$name' and passwd='$pass'";
     $result = @mysqli_query($connection,$sql);
     if($result)
