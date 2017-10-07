@@ -7,7 +7,7 @@ What You Need `Apache Server` and  `MySQL Server` <br>
 How To Use
 <ul>
 <li>Create A Database Named 'test'</li>
-<li>Import the two SQL file</li>
+<li>Import the two SQL file &bull;</li>
 <li>Edit <i>config.php</i> and  <i>info.php</i> according to your enviroments</li>
 <li>Enjoy :D</li>
 </ul>
