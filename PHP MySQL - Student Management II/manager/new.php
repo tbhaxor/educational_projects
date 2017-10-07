@@ -21,7 +21,7 @@ if(isset($_POST['enter']) and $connection)
   $addr = $_POST['addr'];
   $nationality = $_POST['nationality'];
   $remarks = $_POST['remarks'];
-  if(mysqli_query($connection,"INSERT INTO `stumanage_students`(`roll_no`, `name`, `dob`, `father_name`, `mother_name`, `email`, `contact_number`, `father_c_number`, `mother_c_number`, `nationality`, `address`, `remarks`) VALUES ('$roll_no','$name','$dob','$fname','$mname','$email','$cnum','$fcnum','$mcnum','$nationality','$addr','$remarks')"))
+  if($connection->query("INSERT INTO `stumanage_students`(`roll_no`, `name`, `dob`, `father_name`, `mother_name`, `email`, `contact_number`, `father_c_number`, `mother_c_number`, `nationality`, `address`, `remarks`) VALUES ('$roll_no','$name','$dob','$fname','$mname','$email','$cnum','$fcnum','$mcnum','$nationality','$addr','$remarks')"))
   {
     echo "<script>alert('ERROR : Successfully Entered');window.location.href='dashboard.php';</script>";
   }
@@ -29,7 +29,7 @@ if(isset($_POST['enter']) and $connection)
   {
     echo "<script>alert('ERROR : Not Insert');window.location.href='dashboard.php';</script>";
   }
-  mysqli_close($connection);
+  $connection->close();;
 }
 else
 {

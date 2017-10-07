@@ -29,11 +29,12 @@ include_once '../dbconnection.php';
 if($connection)
 {
   $sql = "SELECT * FROM `stumanage_students`";
-  $result = @mysqli_query($connection,$sql);
-  while($row = @mysqli_fetch_assoc($result))
+  $result = $connection->query($sql);
+  while($row = $result->fetch_assoc())
   {
     echo "<tr class=students><td>$row[sno]</td><td>$row[roll_no]</td><td>$row[name]</td><td><a href='view.php?id=$row[sno]' title='View' class='btn btn-default margin-right-10'><i class='glyphicon glyphicon-eye-open'></i> View</a><a href='delete.php?id=$row[sno]' title='Delete' class='btn btn-danger margin-left-10'><i class='glyphicon glyphicon-remove-sign'></i> Delete</a></td></tr>";
   }
+  $connection->close();
 }
 else {
   echo "<strong>Error : </strong>Can\'t Establish DB Connection";

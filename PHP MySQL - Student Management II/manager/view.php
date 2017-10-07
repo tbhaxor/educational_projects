@@ -26,7 +26,7 @@ if(isset($_POST['update']) and $connection)
   $addr = $_POST['addr'];
   $nationality = $_POST['nationality'];
   $remarks = $_POST['remarks'];
-  if(mysqli_query($connection,"UPDATE `stumanage_students` SET `roll_no`='$roll_no',`name`='$name',`dob`='$dob',`father_name`='$fname',`mother_name`='$mname',`email`='$email',`contact_number`='$cnum',`father_c_number`='$fcnum',`mother_c_number`='$mcnum',`nationality`='$nationality',`address`='$addr',`remarks`='$remarks' WHERE `sno`='$id'"))
+  if($connection->query("UPDATE `stumanage_students` SET `roll_no`='$roll_no',`name`='$name',`dob`='$dob',`father_name`='$fname',`mother_name`='$mname',`email`='$email',`contact_number`='$cnum',`father_c_number`='$fcnum',`mother_c_number`='$mcnum',`nationality`='$nationality',`address`='$addr',`remarks`='$remarks' WHERE `sno`='$id'"))
   {
     echo "<script>alert('ERROR : Successfully Updated');window.location.href='dashboard.php';</script>";
   }
@@ -34,16 +34,16 @@ if(isset($_POST['update']) and $connection)
   {
     echo "<script>alert('ERROR : Not Updated');window.location.href='dashboard.php';</script>";
   }
-  mysqli_close($connection);
+  $connection->close();
 }
 else
 {
   if($connection)
   {
     $sql = "SELECT * FROM `stumanage_students` WHERE `sno`=$id";
-    if($result = mysqli_query($connection,$sql))
+    if($result = $connection->query($sql))
     {
-      $row = mysqli_fetch_assoc($result);
+      $row = $result->fetch_assoc();
       echo "<center><h1>Viewing Details For $row[roll_no]</h1></center><br><br><br>";
       echo "<form action='' method=post class=form-horizontal><div class=container>";
       echo "<div class=form-group><div class=col-xs-3><strong>Roll Number</strong></div><div class=col-xs-4><input type=text name='rollno' value='$row[roll_no]' class=form-control></div></div>";
@@ -64,7 +64,7 @@ else
     else {
       echo "<strong>Error : </strong>Can\'t Fetch Data";
     }
-    mysqli_close($connection);
+    $connection->close();
   }
   else
   {

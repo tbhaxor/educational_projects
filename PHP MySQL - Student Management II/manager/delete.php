@@ -17,9 +17,9 @@ include_once '../dbconnection.php';
 if($connection)
 {
   $sql = "DELETE FROM `stumanage_students` WHERE `sno`=$id";
-  if(mysqli_query($connection,$sql))
+  if($connection->query($sql))
   {
-    mysqli_close($connection);
+    $connection->close();
     header("location:dashboard.php");
   }
   else {
