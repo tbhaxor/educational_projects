@@ -2,7 +2,8 @@
 A repo having some projects that are assigned in schools and projects
 
 # Projects
-1. PHP MySQL - Student Management <br><br>
+1. PHP MySQL - Student Management <br>
 <b>Requiremnts:</b><br>
-1. Apache Server</br>
-2. MySQL Server
+<ul>
+<li>Apache Server</li></br>
+</li>MySQL Server</li>
