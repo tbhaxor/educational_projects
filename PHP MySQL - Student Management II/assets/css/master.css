@@ -1,0 +1,41 @@
+html,body{background: whitesmoke;}
+.bold{font-weight: bolder;}
+.underline{text-decoration: underline;}
+.centerText{
+  text-align: center;
+}
+.margin-bottom-20{
+  margin-bottom: 20px;
+}
+.header{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background: rgb(0, 0, 0);
+  color:white;
+  font-family:monospace;
+  font-weight: bolder;
+}
+.index-ip{
+  width: 50%;
+}
+.studentTitle{
+  background: royalblue;
+  color: white;
+  text-align: center;
+}
+.students:nth-child(odd)
+{
+background: lightgrey;
+text-align: center;
+}
+.students:nth-child(even)
+{
+background: white;
+text-align: center;
+}
+.margin-left-10{
+  margin-left: 10px;
+}
+.margin-right-10{
+  margin-right: 10px;
+}
