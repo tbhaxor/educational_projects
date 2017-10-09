@@ -1,41 +1,45 @@
-html,body{background: whitesmoke;}
-.bold{font-weight: bolder;}
-.underline{text-decoration: underline;}
-.centerText{
+.black-white
+{
+  color: white;
+  background: black;
+}
+.header
+{
+  font-family: monospace;
+  letter-spacing: 3px;
+}
+.margin-bottom-m15
+{
+  margin-bottom:-15px;
+}
+.padding-top-m10
+{
+  padding-top: -10px;
+}
+.margin-top-m15
+{
+  margin-top:-15px;
+}
+.margin-top-10
+{
+  margin-top: 10px;
+}
+.margin-bottom-20
+{
+  margin-bottom:  20px;
+}
+.text-center
+{
   text-align: center;
 }
-.margin-bottom-20{
-  margin-bottom: 20px;
-}
-.header{
-  margin-top: 10px;
-  margin-bottom: 30px;
-  background: rgb(0, 0, 0);
+#portal
+{
+  font-family: cursive;
+  letter-spacing: 4px;
   color:white;
-  font-family:monospace;
+  font-size: 20px;
   font-weight: bolder;
 }
-.index-ip{
-  width: 50%;
-}
-.studentTitle{
-  background: royalblue;
-  color: white;
-  text-align: center;
-}
-.students:nth-child(odd)
-{
-background: lightgrey;
-text-align: center;
-}
-.students:nth-child(even)
-{
-background: white;
-text-align: center;
-}
-.margin-left-10{
-  margin-left: 10px;
-}
-.margin-right-10{
-  margin-right: 10px;
-}
+#portal::-moz-selection{color:white;background: black;}
+#portal::-webkit-selection{color:white;background: black;}
+#portal::-o-selection{color:white;background: black;}
