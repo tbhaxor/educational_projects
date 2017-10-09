@@ -29,6 +29,8 @@ include_once '../dbconnection.php';
 if($connection)
 {
   $sql = "SELECT * FROM `stumanage_students`";
+  $statement = $connection->prepare($sql);
+  
   $result = $connection->query($sql);
   while($row = $result->fetch_assoc())
   {

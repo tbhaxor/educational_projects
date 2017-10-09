@@ -14,28 +14,21 @@ if(isset($_POST['login']))
   include_once 'dbconnection.php';
   if($connection)
   {
-    $name = $_POST['inuser'];
-    $pass = $_POST['inpass'];
-    $sql = "SELECT * FROM `stumanage_users` WHERE name='$name' and passwd='$pass'";
-    $result = $connection->query($sql);
-    if($result)
-    {
-      $row = $result->fetch_assoc();
-      if($row)
+      $name = $_POST['inuser'];
+      $pass = $_POST['inpass'];
+      $sql = "SELECT * FROM `stumanage_users` WHERE name='$name' and passwd='$pass'";
+      $statement = $connection->prepare($sql);
+      $statement->execute();
+      $statement->setFetchMode(PDO::FETCH_ASSOC);
+      $result = $statement->fetchall();
+      if(count($result)==0) {echo "<script>alert('Error : Username / Password is incorrcect');</script>";}
+      else
       {
+        $result = $result[0];
         $_SESSION['slogin'] = true;
         $_SESSION['suser'] = $name;
       }
-      else
-      {
-        echo "<script>alert('Error : User $name is not registered');</script>";
-      }
-    }
-    else
-    {
-      echo "<script>alert('Error : Can\'t Run Query');</script>";
-    }
-    $connection->close();
+    $connection = null;
   }
   else
   {
@@ -44,37 +37,36 @@ if(isset($_POST['login']))
 }
 if(isset($_POST['signup']))
 {
-include_once 'dbconnection.php';
-if($connection)
-{
-  $name = $_POST['upuser'];
-  $pass = $_POST['uppass'];
-  $name = str_replace("<","&lt;",$name);
-  $name = str_replace(">","&gt;",$name);
-  $name = str_replace("'","\\'",$name);
-  $name = str_replace("\"","\\\"",$name);
-  $pass = str_replace("'","\\'",$pass);
-  $pass = str_replace("\"","\\\"",$pass);
-  $pass = str_replace("<","&gt;",$pass);
-  $pass = str_replace(">","&gt;",$pass);
-  $pass = str_replace(">","&gt;",$pass);
-  $pass = str_replace(">","&gt;",$pass);
-  $sql = "INSERT INTO `stumanage_users`(`name`, `passwd`) VALUES ('$name','$pass')";
-  $result = $connection->query($sql);
-  if($result)
+  include_once 'dbconnection.php';
+  if($connection)
   {
+    try
+    {
+      $name = $_POST['upuser'];
+      $pass = $_POST['uppass'];
+      // patch
+      $name = str_replace("<","&lt;",$name);
+      $name = str_replace(">","&gt;",$name);
+      $pass = str_replace("<","&lt;",$pass);
+      $pass = str_replace(">","&gt;",$pass);
+      $sql = "INSERT INTO `stumanage_users`(`name`, `passwd`) VALUES ('$name','$pass')";
+      $connection->beginTransaction();
+      $statement = $connection->prepare($sql);
+      $statement->execute();
+      $connection->commit();
       echo "<script>alert('Error : User $name is registered');</script>";
+    }
+    catch (PDOException $e)
+    {
+      $connection->rollback();
+      echo "<script>alert('Error : Can\'t Run Query');</script>";
+    }
+    $connection = null;
   }
   else
   {
-    echo "<script>alert('Error : Can\'t Run Query');</script>";
+    echo "<script>alert('Error : Can\'t Establish DB Connection');</script>";
   }
-  $connection->close();
-}
-else
-{
-  echo "<script>alert('Error : Can\'t Establish DB Connection');</script>";
-}
 }
 if(!isset($_SESSION['slogin']))
 {
