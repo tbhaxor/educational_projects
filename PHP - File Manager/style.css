@@ -1,6 +1,8 @@
 html,body
 {
   background: black;
+  color :white;
+  cursor: default;
 }
 header
 {
@@ -10,6 +12,27 @@ header
   text-shadow: 0px 0px 10px blue;
   margin-bottom: 2%;
 }
+#nf
+{
+  color: lightblue;
+  margin-top: 20px;
+}
+#l1
+{
+  background: transparent;
+  border-width: thin;
+  padding: 5px;
+  width: 150px;
+  color: lightblue;
+}
+#l2
+{
+  background: transparent;
+  border-width: thin;
+  resize: none;
+  color: lightblue;
+}
+
 #login
 {
   background: transparent;
@@ -58,4 +81,42 @@ header
 #upfile
 {
   outline: none;
+}
+#pwd
+{
+  color:lime
+}
+#PWD
+{
+  color:lightgreen;
+  background: black;
+  border-width: thin;
+}
+table,td,tr,th
+{
+ border-collapse: collapse; border-color: white;
+ padding: 5px;
+
+}
+th{padding: 10px;color: red;}
+tr:nth-child(odd):not(#th)
+{
+  transition: background 0.2s linear;
+  background: darkgrey;
+  color: black;
+}
+tr:nth-child(even):not(#th)
+{
+  background: lightgrey;
+  color: black;
+  transition: background 0.5s linear;
+}
+tr:hover:not(#th)
+{
+  background: black;
+  color: white;
+}
+#fn
+{
+  margin-top: 30px;
 }
