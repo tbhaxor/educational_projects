@@ -51,14 +51,8 @@ if($connection)
   $pass = $_POST['uppass'];
   $name = str_replace("<","&lt;",$name);
   $name = str_replace(">","&gt;",$name);
-  $name = str_replace("'","\\'",$name);
-  $name = str_replace("\"","\\\"",$name);
-  $pass = str_replace("'","\\'",$pass);
-  $pass = str_replace("\"","\\\"",$pass);
-  $pass = str_replace("<","&gt;",$pass);
   $pass = str_replace(">","&gt;",$pass);
-  $pass = str_replace(">","&gt;",$pass);
-  $pass = str_replace(">","&gt;",$pass);
+  $pass = str_replace("<","&lt;",$pass);
   $sql = "INSERT INTO `stumanage_users`(`name`, `passwd`) VALUES ('$name','$pass')";
   $result = @mysqli_query($connection,$sql);
   if($result)
