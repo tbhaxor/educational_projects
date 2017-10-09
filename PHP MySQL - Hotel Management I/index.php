@@ -15,8 +15,13 @@
         <h4 class="text-center header">Submitted To -> TEACHER :P</h4>
         <h4 class="text-center header margin-bottom-m15">University Name -> PTU</h4>
       </header>
-      <section id=portal>
-        <h5 class="text-center" id=portal>User Login / Sign up Portal</h5>
+      <section>
+        <h5 class="text-center"><span id=portal>User Login / Sign up Portal</span></h5>
+        <div class="row">
+          <div class="col-md-6">
+            <h4 style="color:white;" class="text-center">Login</h4>
+          </div>
+        </div>
       </section>
     </div>
   </body>

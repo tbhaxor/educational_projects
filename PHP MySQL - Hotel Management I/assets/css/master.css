@@ -8,6 +8,10 @@
   font-family: monospace;
   letter-spacing: 3px;
 }
+.header::-moz-selection{color:black;background: white;}
+.header::-webkit-selection{color:black;background: white;}
+.header::-o-selection{color:black;background: white;}
+
 .margin-bottom-m15
 {
   margin-bottom:-15px;
@@ -39,6 +43,8 @@
   color:white;
   font-size: 20px;
   font-weight: bolder;
+  background: royalblue;
+  padding: 5px;
 }
 #portal::-moz-selection{color:white;background: black;}
 #portal::-webkit-selection{color:white;background: black;}
