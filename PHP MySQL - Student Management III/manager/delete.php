@@ -16,15 +16,20 @@ $id = $_GET['id'];
 include_once '../dbconnection.php';
 if($connection)
 {
-  $sql = "DELETE FROM `stumanage_students` WHERE `sno`=$id";
-  if($connection->query($sql))
+  try
   {
-    $connection->close();
-    header("location:dashboard.php");
+    $sql = "DELETE FROM `stumanage_students` WHERE `sno`=$id";
+    $connection->beginTransaction();
+    $statement = $connection->prepare($sql);
+    $statement->execute();
+    $connection->commit();
   }
-  else {
-    echo "<strong>Error : </strong>Can\'t Delete Data";
+  catch (PDOException $e)
+  {
+    $connection->rollback();
   }
+  $connection = null;
+  header("location:dashboard.php");
 }
 else
 {

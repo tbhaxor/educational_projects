@@ -26,15 +26,21 @@ if(isset($_POST['update']) and $connection)
   $addr = $_POST['addr'];
   $nationality = $_POST['nationality'];
   $remarks = $_POST['remarks'];
-  if($connection->query("UPDATE `stumanage_students` SET `roll_no`='$roll_no',`name`='$name',`dob`='$dob',`father_name`='$fname',`mother_name`='$mname',`email`='$email',`contact_number`='$cnum',`father_c_number`='$fcnum',`mother_c_number`='$mcnum',`nationality`='$nationality',`address`='$addr',`remarks`='$remarks' WHERE `sno`='$id'"))
+  $sql = "UPDATE `stumanage_students` SET `roll_no`='$roll_no',`name`='$name',`dob`='$dob',`father_name`='$fname',`mother_name`='$mname',`email`='$email',`contact_number`='$cnum',`father_c_number`='$fcnum',`mother_c_number`='$mcnum',`nationality`='$nationality',`address`='$addr',`remarks`='$remarks' WHERE `sno`='$id'";
+  try
   {
-    echo "<script>alert('ERROR : Successfully Updated');window.location.href='dashboard.php';</script>";
+    $connection->beginTransaction();
+    $statement = $connection->prepare($sql);
+    $statement->execute();
+    $connection->commit();
+    echo "<script>alert('INFO : Successfully Updated');window.location.href='dashboard.php';</script>";
   }
-  else
+  catch (PDOException $e)
   {
+    $connection->rollback();
     echo "<script>alert('ERROR : Not Updated');window.location.href='dashboard.php';</script>";
   }
-  $connection->close();
+  $connection = null;
 }
 else
 {
