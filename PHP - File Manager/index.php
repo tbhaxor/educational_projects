@@ -48,13 +48,24 @@ function manager()
 function uploader()
 {
   echo "<center><div id=uploader-band>";
+  $cwd = getcwd();
+  $isw = is_writable($cwd) ? "YES" : "NO";
+  echo "<form action='' method=post style=margin-top:50px;margin-bottom:25px;>Current Upload Location : <b>$cwd</b><br>IS WRITABLE : <b>$isw</b><br><br><input type=file id=file name=file><input type=submit id=upfile name=upfile value=Upload></form>";
+  if(isset($_POST['upfile']))
+  {
+    if(!isset($_POST['file'])) {echo "ERROR : No File Selected";}
+    else
+    {
+      print_r($_POST['file']);
+    }
+  }
   echo "</div></center>";
 }
 function logout()
 {
   session_unset();
   session_destroy();
-
+  echo "<script>window.location = window.location;</script>";
 }
 
 function main($password)

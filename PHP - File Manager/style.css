@@ -48,3 +48,14 @@ header
   font-size: 17px;
 }
 #uploader-band
+{
+  color: white;
+}
+#file
+{
+  outline: none;
+}
+#upfile
+{
+  outline: none;
+}
