@@ -61,6 +61,7 @@ function newfile()
     fclose($file);
   }
 }
+
 function home()
 {
   $cwd = getcwd();
