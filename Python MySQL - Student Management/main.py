@@ -29,11 +29,13 @@ def loop():
         elif opt == 1:
             a = libs.addnew.addNew()
             a.get()
+            a.execute()
             a.destroy()
             pass
         elif opt == 2:
             pass
         elif opt == 3:
+
             pass
         elif opt == 4:
             pass

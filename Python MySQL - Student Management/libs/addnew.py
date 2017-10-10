@@ -10,7 +10,14 @@ class addNew():
         self.dbname = libs.config.dbname
         self.dbuser = libs.config.dbuser
         self.dbpass = libs.config.dbpass
-        self.conn = pymysql.connect(self.dbhost, self.dbuser, self.dbpass, self.dbname)
+        try:
+            self.conn = pymysql.connect(self.dbhost, self.dbuser, self.dbpass, self.dbname)
+        except:
+            print(colorama.Fore.LIGHTRED_EX, "\n[x] Error - UNABLE TO CONNECT TO DATABASE", colorama.Fore.LIGHTYELLOW_EX, "\n[!] Info - Exiting")
+            print(colorama.Style.RESET_ALL)  # resetting colors
+            os._exit(1)
+            pass
+
         self.cur = self.conn.cursor()
         pass
 
@@ -35,10 +42,15 @@ class addNew():
         pass
 
     def execute(self):
-        sql = 
-        pass
-
-    def commit(self):
+        sql = "INSERT INTO `stumanage_students`(`roll_no`, `name`, `dob`, `father_name`, `mother_name`, `email`, `contact_number`, `father_c_number`, `mother_c_number`, `nationality`, `address`, `remarks`) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(self.rollno, self.name, self.dob, self.fname, self.mname, self.email, self.snum, self.fnum, self.mnum, self.nationality, self.addr, self.rem)
+        try:
+            self.cur.execute(sql)
+            self.conn.commit()
+            print(colorama.Fore.LIGHTGREEN_EX, "\n[!] Success - New Entry Added")
+        except:
+            self.conn.rollback()
+            print(colorama.Fore.LIGHTRED_EX, "\n[!] Error - Can't Run Query")
+            pass
         pass
 
     def destroy(self):
