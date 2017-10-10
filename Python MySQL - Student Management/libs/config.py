@@ -1,5 +1,5 @@
 # edit file according to your requirements
-dhhost = "localhost"
+dbhost = "localhost"
 dbuser = "root"
 dbpass = ""
 dbname = "test"

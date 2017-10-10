@@ -1,6 +1,8 @@
 # importing local dependencies
 import libs.dependency
 import libs.banner
+import libs.addnew
+# importing global / inbuilt libs
 import os
 import colorama
 
@@ -25,6 +27,8 @@ def loop():
             os._exit(0)
             pass
         elif opt == 1:
+            a = libs.addnew.addNew()
+            a.get()
             pass
         elif opt == 2:
             pass
