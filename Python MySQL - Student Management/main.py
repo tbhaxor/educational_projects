@@ -2,6 +2,7 @@
 import libs.dependency
 import libs.banner
 import libs.addnew
+import libs.viewer
 # importing global / inbuilt libs
 import os
 import colorama
@@ -35,7 +36,9 @@ def loop():
         elif opt == 2:
             pass
         elif opt == 3:
-
+            a = libs.viewer.viewer()
+            a.view()
+            a.destroy()
             pass
         elif opt == 4:
             pass

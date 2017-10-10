@@ -23,7 +23,7 @@ class addNew():
 
     def get(self):
         libs.banner.banner()
-        print("<---==[Add New Entry]==--->\n\n")
+        print("<--=[Add New Entry]=-->\n\n")
         self.rollno = str(input("enter roll number : "))
         self.name = str(input("enter name : "))
         self.dob = str(input("enter date of birth (dd-mm-yyyy): "))
@@ -44,7 +44,7 @@ class addNew():
     def execute(self):
         sql = "INSERT INTO `stumanage_students`(`roll_no`, `name`, `dob`, `father_name`, `mother_name`, `email`, `contact_number`, `father_c_number`, `mother_c_number`, `nationality`, `address`, `remarks`) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(self.rollno, self.name, self.dob, self.fname, self.mname, self.email, self.snum, self.fnum, self.mnum, self.nationality, self.addr, self.rem)
         try:
-            self.cur.execute(sql)
+            self.cur.execute
             self.conn.commit()
             print(colorama.Fore.LIGHTGREEN_EX, "\n[!] Success - New Entry Added")
         except:
