@@ -15,7 +15,7 @@ def menu():
     print(colorama.Fore.RED, "[3]", colorama.Fore.YELLOW, " List All")
     print(colorama.Fore.RED, "[4]", colorama.Fore.YELLOW, " Search Entry")
     print(colorama.Fore.RED, "[5]", colorama.Fore.YELLOW, " Modify Entry")
-    print(colorama.Fore.RED, "[6]", colorama.Fore.YELLOW, " Exit",colorama.Style.RESET_ALL)
+    print(colorama.Fore.RED, "[6]", colorama.Fore.YELLOW, " Exit", colorama.Style.RESET_ALL)
     return int(input(" > "))
     pass
 
@@ -29,6 +29,7 @@ def loop():
         elif opt == 1:
             a = libs.addnew.addNew()
             a.get()
+            a.destroy()
             pass
         elif opt == 2:
             pass
