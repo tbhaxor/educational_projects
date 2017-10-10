@@ -95,13 +95,16 @@ header
 table,td,tr,th
 {
  border-collapse: collapse; border-color: white;
- padding: 5px;
-
+ padding-top: -5px;
+ padding-bottom: -5px;
+ padding-left: 5px;
+ padding-right: 5px;
+ text-align: center;
 }
 th{padding: 10px;color: red;}
 tr:nth-child(odd):not(#th)
 {
-  transition: background 0.2s linear;
+  transition: background 0.09s linear;
   background: darkgrey;
   color: black;
 }
@@ -109,9 +112,9 @@ tr:nth-child(even):not(#th)
 {
   background: lightgrey;
   color: black;
-  transition: background 0.5s linear;
+  transition: background 0.1s linear;
 }
-tr:hover:not(#th)
+tr:hover:not(#th),tr:hover:not(#th) #hactor
 {
   background: black;
   color: white;
@@ -119,4 +122,13 @@ tr:hover:not(#th)
 #fn
 {
   margin-top: 30px;
+}
+#hactor{
+    text-decoration: none;
+    color: black;
+    transition: background 0.1s linear;
+}
+#hactor:hover{
+  text-decoration: underline;
+  color: white;
 }
