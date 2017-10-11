@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
+if(isset($_POST['login']))
+{
+  $name = $_POST['login_user'];
+  $pass = $_POST['login_pass'];
+  $sql = "SELECT 1 FROM `hmanage_users` WHERE `username` = '$name' and `password` = '$pass'";
+  include_once 'dbconn.php';
+  if($connection)
+  {
+    if(mysqli_quer)
+  }
+  else {
+    echo "<script>alert('Error : can't connect to db');location.reload();</script>";
+  }
+}
+elseif (isset($_POST['signup'])) {
+  # code...
+}
 ?>
 <html>
   <head>
@@ -27,12 +43,12 @@ session_start();
             <form class="form-horizontal" action="" method="post">
               <div class="form-group">
                 <center>
-                  <input type="text" name="login[user]" placeholder="username..." class="form-control" id="main">
+                  <input type="text" name="login_user" placeholder="username..." class="form-control" id="main">
                 </center>
               </div>
               <div class="form-group">
                 <center>
-                  <input type="password" name="login[pass]" placeholder="password..." class="form-control" id="main">
+                  <input type="password" name="login_pass" placeholder="password..." class="form-control" id="main">
                 </center>
               </div>
               <div class="form-group">
@@ -47,12 +63,12 @@ session_start();
             <form class="form-horizontal" action="" method="post">
               <div class="form-group">
                 <center>
-                  <input type="text" name="signup[user]" placeholder="username..." class="form-control" id="main">
+                  <input type="text" name="signup_user" placeholder="username..." class="form-control" id="main">
                 </center>
               </div>
               <div class="form-group">
                 <center>
-                  <input type="password" name="signup[pass]" placeholder="password..." class="form-control" id="main">
+                  <input type="password" name="signup_pass" placeholder="password..." class="form-control" id="main">
                 </center>
               </div>
               <div class="form-group">
