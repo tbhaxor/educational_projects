@@ -27,7 +27,6 @@
         {
           $_SESSION['hlogin'] = true;
           $_SESSION['user'] = $name;
-          $_SESSION['password'] = $pass;
           echo "<script>location.reload();</script>";
         }
         else
@@ -43,20 +42,17 @@
     elseif (isset($_POST['signup'])) {
       $name = $_POST['signup_user'];
       $pass = $_POST['signup_pass'];
-      $sql = "INSERT INTO `hmanage_users`(`username`, `password`) VALUES ('$name','$password')";
+      $sql = "INSERT INTO `hmanage_users`(`username`, `password`) VALUES ('$name','$pass')";
       include_once 'dbconn.php';
       if($connection)
       {
-        $result = mysqli_fetch_assoc(mysqli_query($connection,$sql));
-        if(isset($result[1]))
+        if(mysqli_query($connection,$sql))
         {
-          $_SESSION['hlogin'] = true;
-          $_SESSION['user'] = $name;
-          echo "<script>alert('Info : username $name has been added');location.reload();</script>";
+          echo "<script>alert('Info : username $name has been added');</script>";
         }
         else
         {
-          echo "<script>alert('Error : username / password is wrong');location.reload();</script>";
+          echo "<script>alert('Error : can't run the query');location.reload();</script>";
         }
         mysqli_close($connection);
       }
