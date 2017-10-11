@@ -36,6 +36,10 @@
 {
   text-align: center;
 }
+#f
+{
+  margin-top: 40px;
+}
 #portal
 {
   font-family: cursive;
@@ -49,3 +53,15 @@
 #portal::-moz-selection{color:white;background: black;}
 #portal::-webkit-selection{color:white;background: black;}
 #portal::-o-selection{color:white;background: black;}
+#main
+{
+  width: 50%;
+  height: 30px;
+  background: rgba(0,0,0,0.3);
+  color: white;
+}
+#main::-moz-placeholder{color: lightblue;}
+.login
+{
+  width: 50%;
+}

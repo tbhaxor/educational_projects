@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+
+?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -17,9 +20,46 @@
       </header>
       <section>
         <h5 class="text-center"><span id=portal>User Login / Sign up Portal</span></h5>
-        <div class="row">
+        <div class="row" id=f>
           <div class="col-md-6">
-            <h4 style="color:white;" class="text-center">Login</h4>
+            <h2 style="color:white;" class="text-center">Login</h2>
+            <form class="form-horizontal" action="" method="post">
+              <div class="form-group">
+                <center>
+                  <input type="text" name="login[user]" placeholder="username..." class="form-control" id="main">
+                </center>
+              </div>
+              <div class="form-group">
+                <center>
+                  <input type="password" name="login[pass]" placeholder="password..." class="form-control" id="main">
+                </center>
+              </div>
+              <div class="form-group">
+                <center>
+                  <input type="submit" name="login" class="form-control btn btn-success login" value="Login">
+                </center>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h2 style="color:white;" class="text-center">Sign Up</h2>
+            <form class="form-horizontal" action="" method="post">
+              <div class="form-group">
+                <center>
+                  <input type="text" name="signup[user]" placeholder="username..." class="form-control" id="main">
+                </center>
+              </div>
+              <div class="form-group">
+                <center>
+                  <input type="password" name="signup[pass]" placeholder="password..." class="form-control" id="main">
+                </center>
+              </div>
+              <div class="form-group">
+                <center>
+                  <input type="submit" name="signup" class="form-control btn btn-info login" value="Sign Up">
+                </center>
+              </div>
+            </form>
           </div>
         </div>
       </section>
