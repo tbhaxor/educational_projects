@@ -23,24 +23,46 @@
       if($connection)
       {
         $result = mysqli_fetch_assoc(mysqli_query($connection,$sql));
-        die($result);
-        if(true)
+        if(isset($result[1]))
         {
           $_SESSION['hlogin'] = true;
           $_SESSION['user'] = $name;
-          echo "<script>alert('Error : username / password is wrong');location.reload();</script>";
+          $_SESSION['password'] = $pass;
+          echo "<script>location.reload();</script>";
         }
         else
         {
           echo "<script>alert('Error : username / password is wrong');location.reload();</script>";
         }
+        mysqli_close($connection);
       }
       else {
         echo "<script>alert('Error : can't connect to db');location.reload();</script>";
       }
     }
     elseif (isset($_POST['signup'])) {
-      # code...
+      $name = $_POST['signup_user'];
+      $pass = $_POST['signup_pass'];
+      $sql = "INSERT INTO `hmanage_users`(`username`, `password`) VALUES ('$name','$password')";
+      include_once 'dbconn.php';
+      if($connection)
+      {
+        $result = mysqli_fetch_assoc(mysqli_query($connection,$sql));
+        if(isset($result[1]))
+        {
+          $_SESSION['hlogin'] = true;
+          $_SESSION['user'] = $name;
+          echo "<script>alert('Info : username $name has been added');location.reload();</script>";
+        }
+        else
+        {
+          echo "<script>alert('Error : username / password is wrong');location.reload();</script>";
+        }
+        mysqli_close($connection);
+      }
+      else {
+        echo "<script>alert('Error : can't connect to db');location.reload();</script>";
+      }
     }
     ?>
     <div class="container">
