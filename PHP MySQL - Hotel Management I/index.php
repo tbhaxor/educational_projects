@@ -1,24 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-if(isset($_POST['login']))
-{
-  $name = $_POST['login_user'];
-  $pass = $_POST['login_pass'];
-  $sql = "SELECT 1 FROM `hmanage_users` WHERE `username` = '$name' and `password` = '$pass'";
-  include_once 'dbconn.php';
-  if($connection)
-  {
-    if(mysqli_quer)
-  }
-  else {
-    echo "<script>alert('Error : can't connect to db');location.reload();</script>";
-  }
-}
-elseif (isset($_POST['signup'])) {
-  # code...
-}
-?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -28,6 +8,41 @@ elseif (isset($_POST['signup'])) {
     <title>Hotel Management Program</title>
   </head>
   <body style="background-image:url('assets/media/bg.jpg');height: 100%;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
+    <?php
+    session_start();
+    if(isset($_SESSION['hlogin']))
+    {
+      echo "<script>window.location = 'dashboard/';</script>";
+    }
+    if(isset($_POST['login']))
+    {
+      $name = $_POST['login_user'];
+      $pass = $_POST['login_pass'];
+      $sql = "SELECT 1 FROM `hmanage_users` WHERE `username` = '$name' and `password` = '$pass'";
+      include_once 'dbconn.php';
+      if($connection)
+      {
+        $result = mysqli_fetch_assoc(mysqli_query($connection,$sql));
+        die($result);
+        if(true)
+        {
+          $_SESSION['hlogin'] = true;
+          $_SESSION['user'] = $name;
+          echo "<script>alert('Error : username / password is wrong');location.reload();</script>";
+        }
+        else
+        {
+          echo "<script>alert('Error : username / password is wrong');location.reload();</script>";
+        }
+      }
+      else {
+        echo "<script>alert('Error : can't connect to db');location.reload();</script>";
+      }
+    }
+    elseif (isset($_POST['signup'])) {
+      # code...
+    }
+    ?>
     <div class="container">
       <header class="jumbotron black-white margin-top-10 margin-bottom-20">
         <h4 class="text-center header margin-top-m15">Project -> Hotel Management Application</h4>
