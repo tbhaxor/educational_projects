@@ -1,48 +1,22 @@
 # college_school_projects
-A repo having some projects that are assigned in schools and projects
+> A repository having some projects that are assigned in schools and projects. This is only for educational purpose
 
 # Projects
-1. <b>PHP MySQL - Student Management I</b><br>
-What You Need `Apache Server` and  `MySQL Server` <br>
-Features `None` <br>
-How To Use<br>
-&bull; Create A Database Named 'test'<br>
-&bull; Import the two SQL file in the newly created database<br>
-&bull; Edit <i>config.php</i> and  <i>info.php</i> according to your environments<br>
-&bull; Enjoy :D<br><br>
-<b>Contact Me <a href="#my-contact-info">here</a></b><br><br>
-<b>Screen Shot</b><br>
-<img src="https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/PHP%20MySQL%20-%20Student%20Management%20I/SS.PNG"><br><hr>
-2. <b>PHP MySQL - Student Management II</b><br>
-What You Need `Apache Server` and  `MySQL Server` <br>
-Features `OOPS Style` and `Security Increased By Level 1`<br>
-How To Use<br>
-&bull; Create A Database Named 'test'<br>
-&bull; Import the two SQL file<br>
-&bull; Edit <i>config.php</i> and  <i>info.php</i> according to your environments<br>
-&bull; Enjoy :D<br><br>
-<b>Contact Me <a href="#my-contact-info">here</a></b><br><br>
-<b>Screen Shot</b><br>
-<img src="https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/PHP%20MySQL%20-%20Student%20Management%20I/SS.PNG"><br><hr>
-3. <b>PHP MySQL - Student Management III</b><br>
-What You Need `Apache Server` and  `MySQL Server` <br>
-Features `PDO OOPS Style` and `Security Increased By Level 1` and `Protection Against SQLi Attacks` <br>
-How To Use<br>
-&bull; Create A Database Named 'test'<br>
-&bull; Import the two SQL file<br>
-&bull; Edit <i>config.php</i> and  <i>info.php</i> according to your environments<br>
-&bull; Enjoy :D<br><br>
-<b>Contact Me <a href="#my-contact-info">here</a></b><br><br>
-<b>Screen Shot</b><br>
-<img src="https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/PHP%20MySQL%20-%20Student%20Management%20I/SS.PNG"><br><hr>
-4. <b>PHP - File Manager</b><br>
-What You Need `Apache Server`<br>
-Features `File Manager` and `File Upload and Download Facility`<br>
-<hr>
-5. <b>PHP MYSQL- Hotel Management I</b><br>
-What You Need `Apache Server` and `MYSQL Server`<br>
-<hr>
+## PHP and Mysql
+1. [**PHP MYSQL - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL)
+2. [**PHP MYSQL -Hotel Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/HOTEL_MANAGEMENT_IN_PHP_MYSQL)
+3. [**PHP - FILE MANAGER**](https://github.com/tbhaxor/school_college_projects/tree/master/PHP%20-%20File%20Manager)
+4. [**C -Billing System**]()
 
-# My Contact Info
-<b>Face Book : https://facebook.com/gurkirat.py</b><br>
-<b>Email Address : tbhaxor@gmail.com</b>
+# Contribution Rule
+1. Add your name in this read me at **Contributors** section first and wait for merge
+2. Issue should be added first adding code
+3. Push Format - `LANGUAGE(s) USED` - `Program Made`, create directory like this
+4. Add subdirectories if same code has different implementations with same dependencies and language
+5. README.md file must exists in every directory (not subdirectories if exists) like [this](https://github.com/tbhaxor/school_college_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md)
+
+# Contributors
++ Gurkirat Singh (owner)
+[**facebook**](https://facebook.com/gurkirat.py)
+[**Email Address**](tbhaxor@gmail.com)
+[**Github**](https://github.com/tbhaxor)
