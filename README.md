@@ -16,7 +16,7 @@
 5. README.md file must exists in every directory (not subdirectories if exists) like [this](https://github.com/tbhaxor/school_college_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md)
 
 # Contributors
-+ Gurkirat Singh (owner)
-[**facebook**](https://facebook.com/gurkirat.py)
-[**Email Address**](tbhaxor@gmail.com)
-[**Github**](https://github.com/tbhaxor)
+## Gurkirat Singh (owner)
++ [**facebook**](https://facebook.com/gurkirat.py)
++ [**Email Address**](mailto:tbhaxor@gmail.com)
++ [**Github**](https://github.com/tbhaxor)
