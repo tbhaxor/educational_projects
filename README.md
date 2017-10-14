@@ -9,14 +9,14 @@
 4. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM)
 
 # Contribution Rule
-1. Add your name in this read me at **Contributors** section first and wait for merge
+1. Add your name in this read me at [**Contributors**](#Contributors) section first and wait for merge
 2. Issue should be added first adding code
 3. Push Format - `LANGUAGE(s) USED` - `Program Made`, create directory like this
 4. Add subdirectories if same code has different implementations with same dependencies and language
 5. README.md file must exists in every directory (not subdirectories if exists) like [this](https://github.com/tbhaxor/school_college_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md)
 
 # Contributors
-## Gurkirat Singh (owner)
+### Gurkirat Singh (owner)
 + [**facebook**](https://facebook.com/gurkirat.py)
 + [**Email Address**](mailto:tbhaxor@gmail.com)
 + [**Github**](https://github.com/tbhaxor)
