@@ -6,7 +6,7 @@
 1. [**PHP MYSQL - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL)
 2. [**PHP MYSQL -Hotel Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/HOTEL_MANAGEMENT_IN_PHP_MYSQL)
 3. [**PHP - FILE MANAGER**](https://github.com/tbhaxor/school_college_projects/tree/master/PHP%20-%20File%20Manager)
-4. [**C -Billing System**]()
+4. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM)
 
 # Contribution Rule
 1. Add your name in this read me at **Contributors** section first and wait for merge
