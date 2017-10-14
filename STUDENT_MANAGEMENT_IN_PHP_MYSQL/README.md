@@ -24,6 +24,6 @@ This contains three type of programs with same db type i.e `mysql` but diffrent 
 # What is different in these 3 projects?
 | Project | Key Feature|
 |----|---|
-|PHP MySQL - Student Management I| Procedural Mysql implementation in PHP |
-|PHP MySQL - Student Management II| OOPS Mysql implementation in PHP |
-|PHP MySQL - Student Management III| PDO Mysql implementation in PHP |
+|Student_Management_I| Procedural Mysql implementation in PHP |
+|Student_Management_II| OOPS Mysql implementation in PHP |
+|Student_Management_III| PDO Mysql implementation in PHP |
