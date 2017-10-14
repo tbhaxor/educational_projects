@@ -9,6 +9,12 @@ This contains three type of programs with same db type i.e `mysql` but diffrent 
 + login and registration portal for manager
 + dashboard facility to _change_ , _view_ , _delete_ and _add new entry_ Features
 
+## Setup and Run
++ Create A Database Named `test`
++ Select the Database `test` and import _stumanage_users.sql_ and _stumanage_students.sql_ located in the directory
++ Edit **config.php** and **info.php**
++ Enjoy :+1
+
 ## Screen Shot
 ![SS](https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/PHP%20MySQL%20-%20Student%20Management%20II/SS.PNG)
 
