@@ -16,7 +16,7 @@ This contains three type of programs with same db type i.e `mysql` but diffrent 
 + Enjoy :+1
 
 ## Screen Shot
-![SS](https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/PHP%20MySQL%20-%20Student%20Management%20II/SS.PNG)
+![SS](https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/PHP_MySQL_-_Student_Management_II/SS.PNG)
 
 ## Demo Video
 [![Setup and Demo](http://img.youtube.com/vi/xqhnetiqHQY/0.jpg)](http://www.youtube.com/watch?v=xqhnetiqHQY)
