@@ -14,7 +14,7 @@
 1. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM)
 
 # Contribution Rule
-1. Add your name in this read me at [**Contributors**](#Contributors) section first and wait for merge
+1. Add your name in this read me at [**Contributors**](#contributors) section first and wait for merge
 2. Issue should be added first adding code
 3. Push Format - `LANGUAGE(s) USED` _ `Program Made`, create directory like this  for example -  check my commits
 4. Add subdirectories if same code has different implementations with same dependencies and language
