@@ -19,8 +19,8 @@ This contains three type of programs with same db type i.e `mysql` but diffrent 
 ![SS](https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/STUDENT_MANAGEMENT_IN_PYTHON/Student_Management_I/SS.PNG)
 
 ## Demo Video
-<!--
-[![Setup and Demo](http://img.youtube.com/vi/xqhnetiqHQY/0.jpg)](http://www.youtube.com/watch?v=xqhnetiqHQY)
+### CLI VERSION
+[![Setup and Demo](http://img.youtube.com/vi/YLbNVwAbpZU/0.jpg)](http://www.youtube.com/watch?v=YLbNVwAbpZU)
 -->
 
 # What is different in these 3 projects?
