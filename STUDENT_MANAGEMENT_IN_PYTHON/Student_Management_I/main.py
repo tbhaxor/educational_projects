@@ -5,7 +5,6 @@ import libs.addnew
 import libs.viewer
 import libs.delete
 import libs.search
-import libs.modify
 # importing global / inbuilt libs
 import os
 import colorama
@@ -18,8 +17,7 @@ def menu():
     print(colorama.Fore.RED, "[2]", colorama.Fore.YELLOW, " Delete Entry")
     print(colorama.Fore.RED, "[3]", colorama.Fore.YELLOW, " List All")
     print(colorama.Fore.RED, "[4]", colorama.Fore.YELLOW, " Search Entry")
-    print(colorama.Fore.RED, "[5]", colorama.Fore.YELLOW, " Modify Entry")
-    print(colorama.Fore.RED, "[6]", colorama.Fore.YELLOW, " Exit", colorama.Style.RESET_ALL)
+    print(colorama.Fore.RED, "[5]", colorama.Fore.YELLOW, " Exit", colorama.Style.RESET_ALL)
     return int(input(" > "))
     pass
 
@@ -27,7 +25,7 @@ def menu():
 def loop():
     while True:
         opt = menu()
-        if opt == 6:
+        if opt == 5:
             os._exit(0)
             pass
         elif opt == 1:
@@ -57,8 +55,6 @@ def loop():
             a.get()
             a.view()
             a.destroy()
-            pass
-        elif opt == 5:
             pass
 
         input(colorama.Fore.LIGHTYELLOW_EX + "\n\n[!] Info - Press Enter To Continue" + colorama.Style.RESET_ALL)

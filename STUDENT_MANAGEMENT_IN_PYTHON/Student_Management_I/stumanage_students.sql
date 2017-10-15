@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `stumanage_students`
 --
 
-CREATE TABLE `stumanage_students` (
+ CREATE TABLE `stumanage_students` (
   `sno` int(10) UNSIGNED NOT NULL,
   `roll_no` text NOT NULL,
   `name` text NOT NULL,
