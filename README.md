@@ -3,15 +3,15 @@
 
 # Projects
 ## PHP and Mysql
-1. [**PHP MYSQL - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL)
-2. [**PHP MYSQL - Hotel Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/HOTEL_MANAGEMENT_IN_PHP_MYSQL)
+1. [**PHP MYSQL - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL) **status : completed**
+2. [**PHP MYSQL - Hotel Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/HOTEL_MANAGEMENT_IN_PHP_MYSQL) **status : under development**
 ## Python and Mysql
-1. [**Python Mysql - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PYTHON)
+1. [**Python Mysql - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PYTHON) **status : completed**
 ## PHP
-1. [**PHP - FILE MANAGER**](https://github.com/tbhaxor/school_college_projects/tree/master/PHP%20-%20File%20Manager)
-
+1. [**PHP - FILE MANAGER**](https://github.com/tbhaxor/school_college_projects/tree/master/PHP%20-%20File%20Manager) **status : under development**
+## BASH  
 ## C
-1. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM)
+1. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM) **status : completed**
 
 # Contribution Rule
 1. Add your name in this read me at [**Contributors**](#contributors) section first and wait for merge
