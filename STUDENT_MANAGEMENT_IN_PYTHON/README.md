@@ -1,4 +1,4 @@
-# Student management program in php and mysql
+# Student management program in python3 and mysql
 This contains three type of programs with same db type i.e `mysql` but diffrent way of implementation
 ## Requirements
 * Python 3.x
