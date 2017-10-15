@@ -1,4 +1,4 @@
-# college_school_projects
+# School College Projects
 > A repository having some projects that are assigned in schools and projects. This is only for educational purpose
 
 # Projects
