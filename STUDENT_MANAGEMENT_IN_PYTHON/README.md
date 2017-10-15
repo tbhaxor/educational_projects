@@ -6,7 +6,7 @@ This contains three type of programs with same db type i.e `mysql` but diffrent 
 
 ## Features
 + no login and registration portal for manager, direct access
-+ dashboard facility to _change_ , _view_ , _delete_, _add new entry_ and _Search Entry_
++ dashboard facility to _change_ (only in gui version), _view_ , _delete_, _add new entry_ and _Search Entry_
 
 ## Setup and Run
 + Create A Database Named `test`
