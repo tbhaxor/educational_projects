@@ -3,5 +3,5 @@ using namespace std;
 
 string Banner()
 {
-	cout<<
+	cout<<"";
 }
