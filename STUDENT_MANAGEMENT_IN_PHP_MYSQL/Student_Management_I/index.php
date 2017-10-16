@@ -1,3 +1,7 @@
+<!--
+  THE MAIN INDEX FILE
+  LOGIN PORTAL FOR THE MANAGER
+-->
 <html>
 <head>
 <title>Student Management Program</title>
@@ -8,11 +12,11 @@
 
 <!--PHP BACKEND and FrontEnd-->
 <?php
-session_start();
-if(isset($_POST['login']))
+session_start();   // starting the server session
+if(isset($_POST['login']))   // checking if user wants to login ?
 {
-  include_once 'dbconnection.php';
-  if($connection)
+  include_once 'dbconnection.php';  // including db connection file
+  if($connection)   // checking whether the client - server dbconnection is established or not
   {
     $name = $_POST['inuser'];
     $pass = $_POST['inpass'];
