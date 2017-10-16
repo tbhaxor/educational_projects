@@ -12,6 +12,8 @@
 ## BASH  
 ## C
 1. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM) **status : completed**
+## CPP
+1. [**C++ - Bank Account Information Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/CPP_BANK_ACCOUNT_INFO_MANAGER) **status : under development**
 
 # Contribution Rule
 1. Add your name in this read me at [**Contributors**](#contributors) section first and wait for merge
