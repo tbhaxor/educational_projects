@@ -1,3 +1,6 @@
+<!--
+ View details and updation page
+-->
 <html>
 <head>
 <title>Student Management Program</title>
@@ -5,15 +8,27 @@
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="../assets/css/master.css">
 <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+
+<!--
+PHP Backend and forntend
+-->
 <?php
-if(!isset($_GET['id']) or empty(@$_GET['id']))
+if(!isset($_GET['id']) or empty(@$_GET['id']))  // checks whether url contains any id parameter and is not empty
 {
+  /*
+   * stops entire script if id parameter is not set or empty
+   */
   die();
 }
-$id = $_GET['id'];
-include_once '../dbconnection.php';
-if(isset($_POST['update']) and $connection)
+$id = $_GET['id']; // getting value of id parameter
+include_once '../dbconnection.php'; // including dbconnection.php to set db connection
+if(isset($_POST['update']) and $connection) // checks whether connection to database is Established or not and if user wants to change
 {
+  /*
+   * connection to db is Established and user wants to update the changes
+   *
+   * getting POST Request details from the user and storing the variable
+   */
   $roll_no = $_POST['rollno'];
   $name = $_POST['name'];
   $dob = $_POST['dob'];
@@ -26,24 +41,35 @@ if(isset($_POST['update']) and $connection)
   $addr = $_POST['addr'];
   $nationality = $_POST['nationality'];
   $remarks = $_POST['remarks'];
+
+  // running query on connection and checking if tuple is updated or not
   if(mysqli_query($connection,"UPDATE `stumanage_students` SET `roll_no`='$roll_no',`name`='$name',`dob`='$dob',`father_name`='$fname',`mother_name`='$mname',`email`='$email',`contact_number`='$cnum',`father_c_number`='$fcnum',`mother_c_number`='$mcnum',`nationality`='$nationality',`address`='$addr',`remarks`='$remarks' WHERE `sno`='$id'"))
   {
-    echo "<script>alert('ERROR : Successfully Updated');window.location.href='dashboard.php';</script>";
+    /*
+     * tuple is updated
+     */
+    echo "<script>alert('ERROR : Successfully Updated');window.location.href='dashboard.php';</script>";  // redirecting to dashboard
   }
   else
   {
-    echo "<script>alert('ERROR : Not Updated');window.location.href='dashboard.php';</script>";
+    /*
+     * tuple is not updated
+     */
+    echo "<script>alert('ERROR : Not Updated');window.location.href='dashboard.php';</script>";  // redirecting to dashboard
   }
-  mysqli_close($connection);
+  mysqli_close($connection);  // closing the mysql connection
 }
 else
 {
-  if($connection)
+  /*
+   * user doesnt wants to update
+   */
+  if($connection) // checks whether connection to database is Established or not
   {
-    $sql = "SELECT * FROM `stumanage_students` WHERE `sno`=$id";
-    if($result = mysqli_query($connection,$sql))
+    $sql = "SELECT * FROM `stumanage_students` WHERE `sno`=$id"; // select Details for particular student
+    if($result = mysqli_query($connection,$sql)) // running query on connection and checking is entry exists or not
     {
-      $row = mysqli_fetch_assoc($result);
+      $row = mysqli_fetch_assoc($result);  // fetching data from result
       echo "<center><h1>Viewing Details For $row[roll_no]</h1></center><br><br><br>";
       echo "<form action='' method=post class=form-horizontal><div class=container>";
       echo "<div class=form-group><div class=col-xs-3><strong>Roll Number</strong></div><div class=col-xs-4><input type=text name='rollno' value='$row[roll_no]' class=form-control></div></div>";
@@ -62,12 +88,18 @@ else
       echo "</div></form>";
     }
     else {
+      /*
+       * entry doesn't exists
+       */
       echo "<strong>Error : </strong>Can\'t Fetch Data";
     }
-    mysqli_close($connection);
+    mysqli_close($connection);  // closing mysql connection
   }
   else
   {
+    /*
+     * connection to db is not Established
+     */
     echo "<strong>Error : </strong>Can\'t Establish DB Connection";
   }
 }
