@@ -1,7 +1,9 @@
+# importing builtin module(s)
 import os
+# importing third party module
 import colorama
 
-
+# function to print banner
 def banner():
     os.system("cls")
     print(colorama.Fore.BLACK, colorama.Back.LIGHTCYAN_EX)
