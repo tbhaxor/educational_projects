@@ -1,5 +1,5 @@
-import libs.panel
+import libs.loginportal
 
-a = libs.panel.Panel("LOL")
+a = libs.loginportal.Portal()
 a.makepanel()
 a.deploy()

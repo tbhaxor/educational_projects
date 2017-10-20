@@ -1,6 +1,7 @@
 import libs.config
 import libs.panel
 from tkinter import *
+from tkinter.ttk import *
 from tkinter import messagebox
 import pymysql
 import sys
@@ -13,23 +14,23 @@ class Portal():
         self.__root.geometry("700x400")
         self.__heading = Label(self.__root, text="Admin Login Portal", font=("Arial Black", 20, "bold"))
         # for login
-        self.__l = Label(self.__root, text="Login Portal", fg="red")
+        self.__l = Label(self.__root, text="Login Portal")
         self.__l1 = Label(self.__root, text="Username : ")
         self.__lUser = StringVar()
         self.__l2 = Entry(self.__root, textvariable = self.__lUser)
         self.__l3 = Label(self.__root, text="Password : ")
         self.__lPass = StringVar()
         self.__l4 = Entry(self.__root, show="*", textvariable = self.__lPass)
-        self.__l5 = Button(self.__root, text="Login", height=1, width=15, command=self.__login)
+        self.__l5 = Button(self.__root, text="Login", command=self.__login)
         # for signup
-        self.__s = Label(self.__root, text="Signup Portal", fg="red")
+        self.__s = Label(self.__root, text="Signup Portal")
         self.__s1 = Label(self.__root, text="Username : ")
         self.__sUser = StringVar()
         self.__s2 = Entry(self.__root, textvariable = self.__sUser)
         self.__s3 = Label(self.__root, text="Password : ")
         self.__sPass = StringVar()
         self.__s4 = Entry(self.__root, show="*", textvariable = self.__sPass)
-        self.__s5 = Button(self.__root, text="Signup", height=1, width=15, command=self.__signup)
+        self.__s5 = Button(self.__root, text="Signup",command=self.__signup)
         pass
 
     def makepanel(self):
@@ -73,7 +74,7 @@ class Portal():
             chk = curr.fetchall()
             if len(chk) == 1:
                 self.__root.destroy()
-                panel = libs.panel.Panel()
+                panel = libs.panel.Panel(u)
                 panel.makepanel()
                 panel.deploy()
                 pass
