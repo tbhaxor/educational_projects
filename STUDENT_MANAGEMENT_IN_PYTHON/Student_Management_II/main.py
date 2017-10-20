@@ -1,5 +1,6 @@
 import libs.loginportal
+import libs.dependency
 
-a = libs.loginportal.Login()
+a = libs.loginportal.Portal()
 a.makepanel()
-a.show()
+a.deploy()
