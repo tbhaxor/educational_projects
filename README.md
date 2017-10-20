@@ -11,7 +11,7 @@
 ## C
 1. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM)
 
-# Contribution Rule
+# Contribution Rule (To Be Strictly Followed)
 1. Add your name in this read me at [**Contributors**](#contributors) section first and wait for merge
 2. Issue should be added first adding code
 3. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
