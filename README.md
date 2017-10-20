@@ -14,7 +14,7 @@
 # Contribution Rule
 1. Add your name in this read me at [**Contributors**](#contributors) section first and wait for merge
 2. Issue should be added first adding code
-3. Don't commit changes to _master_ branch, rather check [How to Work as a Contributor](#contributors)
+3. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
 4. Add subdirectories if same code has different implementations with same dependencies and language
 5. README.md file must exists in every directory (not subdirectories if exists) like [this](https://github.com/tbhaxor/school_college_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md)
 6. **THE MOST IMPORTANT RULE** dont commits any thing in master branch until and the project is completed
@@ -24,7 +24,7 @@
 > git checkout -b <enter_branch_name>
 
 2. Commit all the changes to current branches
-3. Test an run
+3. Test and run
 4. Finally, when everything is done push the current branch to _origin_
 > git push origin <enter_branch_name>
 
