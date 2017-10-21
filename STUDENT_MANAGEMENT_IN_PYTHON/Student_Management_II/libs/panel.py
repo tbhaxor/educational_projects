@@ -1,5 +1,6 @@
 import libs.loginportal
 import libs.config
+import libs.addnew
 import libs.viewall
 from tkinter import *
 from tkinter.ttk import *
@@ -49,6 +50,9 @@ class Panel():
         pass
 
     def __new(self):
+        panel = libs.addnew.AddNew()
+        panel.makepanel()
+        panel.deploy()
         pass
 
     def __viewall(self):
