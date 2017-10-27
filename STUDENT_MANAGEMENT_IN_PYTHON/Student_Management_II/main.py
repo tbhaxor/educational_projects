@@ -1,5 +1,9 @@
-import libs.panel
+# importing libraries
+from libs import dependency, loginportal
 
-a = libs.panel.Panel("LOL")
-a.makepanel()
-a.deploy()
+
+if __name__ == '__main__':
+    dependency.chk()  # checking dependencies
+    a = loginportal.Portal()   # creating object
+    a.makepanel()              # making panel
+    a.deploy()                 # deploying panel

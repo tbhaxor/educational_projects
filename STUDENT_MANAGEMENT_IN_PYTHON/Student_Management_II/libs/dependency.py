@@ -1,34 +1,20 @@
+# importing built in modules
 import pip
+import sys
 import os
 
 
+# function to check and install dependencies
 def chk():
-    any_install = False
+    # trying to import the pymysql module
     try:
         import pymysql
-    except (ImportError, ModuleNotFoundError):
-        os.system("cls")
-        print("[!] Installing Dependency - pymysl")
-        pip.main(["install", "pymysql"])
+    except (ImportError, ModuleNotFoundError):  # lines under exception will be executed if module pymysql is not found
+        os.system("cls")                                          # clearing screen
+        print("[!] Installing Dependency - pymysl")               # printing message
+        pip.main(["install", "pymysql"])                          # installing the dependencies
+        print("[!] Info - Dependencies have been installed")      # printing info
+        print("[!] Info - Exiting Program")                       # printing info
+        sys.exit(1)                                               # exiting the program
         pass
-    try:
-        import dashtable
-    except (ImportError, ModuleNotFoundError):
-        os.system("cls")
-        print("[!] Installing Dependency - dashtable")
-        pip.main(["install", "dashtable"])
-        pass
-    try:
-        import colorama
-    except (ImportError, ModuleNotFoundError):
-        os.system("cls")
-        print("[!] Installing Dependency - colorama")
-        pip.main(["install", "colorama"])
-        pass
-
-    if any_install:
-        print("[!] Info - Dependencies have been installed")
-        print("[!] Info - Exiting Program")
-        pass
-
     pass
