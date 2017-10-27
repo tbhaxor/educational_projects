@@ -87,22 +87,31 @@ class Panel:
         panel.deploy()                  # deploying panel
         pass
 
+    # ------------------
+    #  private method that will be invoked when user wants to fetch the details of all the students
+    # ------------------
     def __del(self):
-        panel = libs.delete.Delete()
-        panel.makepanel()
-        panel.deploy()
+        panel = libs.delete.Delete()   # creating object
+        panel.makepanel()              # making panel
+        panel.deploy()                 # deploying panel
         pass
 
+    # ------------------
+    #  private method that will be invoked when user wants to fetch the details of all the students
+    # ------------------
     def __search(self):
-        panel = libs.search.Search()
-        panel.makepanel()
-        panel.deploy()
+        panel = libs.search.Search()   # creating object
+        panel.makepanel()              # making panel
+        panel.deploy()                 # deploying panel
         pass
 
+    # ------------------
+    #  private method that will be invoked when user wants to modify the details
+    # ------------------
     def __mod(self):
-        panel = libs.modify.Modify()
-        panel.makepanel()
-        panel.deploy()
+        panel = libs.modify.Modify()   # creating object
+        panel.makepanel()              # making panel
+        panel.deploy()                 # deploying panel
         pass
 
     # ------------------

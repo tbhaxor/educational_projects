@@ -160,7 +160,7 @@ class AddNew:
         pass
 
     # ---------------------
-    #  Public method of the class to show the method
+    #  Public method of the class to show the panel
     # ---------------------
     def deploy(self):
         self.__root.mainloop()

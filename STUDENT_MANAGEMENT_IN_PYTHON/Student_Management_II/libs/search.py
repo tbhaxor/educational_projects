@@ -6,19 +6,28 @@ from tkinter.ttk import *
 from tkinter import messagebox
 import pymysql
 
+
 # class to make a search
 class Search:
+    # ---------------------
+    #  Constructing Search Class
+    # ---------------------
     def __init__(self):
+        # configuring panel
         self.__root = Tk()
         self.__root.title("Student Management Program")
         self.__root.geometry("600x450")
         self.__root.resizable(False, False)
 
+        # declaring widgets
         self.__s1 = Label(self.__root, text="Enter Roll Number ")
         self.__s2 = Entry(self.__root, width=35)
         self.__s3 = Button(self.__root, text="Search", command=self.__makesearch)
         pass
 
+    # ---------------------
+    #  Public Method to place widgets on the panel
+    # ---------------------
     def makepanel(self):
         self.__s1.place(x=20, y=25)
         self.__s2.place(x=130, y=25)
@@ -32,39 +41,52 @@ class Search:
         self.__s2.focus_force()
         pass
 
+    # ---------------------
+    #  Private Method to make a search
+    # ---------------------
     def __makesearch(self):
+        # getting roll number
         roll_number = self.__s2.get()
+
+        # emptying box
         self.__s2.delete(0, END)
-        sql_1 = "SELECT 1 FROM `stumanage_students` WHERE `roll_no`='{}'".format(roll_number)
-        sql_2 = "SELECT * FROM `stumanage_students` WHERE `roll_no`='{}'".format(roll_number)
+
+        # sql queries
+        sql_1 = "SELECT 1 FROM `stumanage_students` WHERE `roll_no`='{}'".format(roll_number)  # sql ro check if roll number exists or not
+        sql_2 = "SELECT * FROM `stumanage_students` WHERE `roll_no`='{}'".format(roll_number)  # sql to fetch all details
+
+        # trying to connect to mysql server
         try:
-            conn = pymysql.connect(libs.config.dbhost, libs.config.dbuser, libs.config.dbpass, libs.config.dbname)
-            curr = conn.cursor()
+            conn = pymysql.connect(libs.config.dbhost, libs.config.dbuser, libs.config.dbpass, libs.config.dbname)  # connecting to mysql server
+            curr = conn.cursor()               # getting mysql cursor
             pass
-        except:
-            messagebox.showerror("Error", "Can't establish connection with database")
-            sys.exit(1)
+        except:  # this will be invoked when there is some error occurred while connecting to sql
+            messagebox.showerror("Error", "Can't establish connection with database")  # displaying error message
+            sys.exit(1)                                                    # exiting on error
             pass
 
+        # trying to execute the sql query
         try:
-            curr.execute(sql_1)
-            chk = len(curr.fetchall())
+            curr.execute(sql_1)          # executing check statement
+            chk = len(curr.fetchall())   # counting rows
             if chk == 0:
                 messagebox.showwarning("Warning", "Roll Number {} doesn't exists".format(roll_number))
                 pass
             else:
-                curr.execute(sql_2)
-                data = curr.fetchall()
-                self.__print(list(data[0]))
+                curr.execute(sql_2)           # selecting tuple
+                data = curr.fetchall()        # fetching tuple
+                self.__print(list(data[0]))   # self method for printing data
                 pass
-
+        except:  # this will be executed if there is some error in sql or some sql injection takes place
+            messagebox.showerror("Error", "Can't run query")  # displaying error messagebox
+            sys.exit(1)  # exiting system on error
             pass
-        except:
-            messagebox.showerror("Error", "Can't Execute the query")
-            pass
-        conn.close()
+        conn.close()  # closing mysql connection
         pass
 
+    # ---------------------
+    #  Private method to print the data
+    # ---------------------
     def __print(self, data):
         Label(self.__root, text="Personal Details", font=('arial', 17, "bold")).place(x=25, y=60)
         Label(self.__root, text="Student's Roll Number : {}".format(data[1])).place(x=30, y=100)
@@ -83,6 +105,9 @@ class Search:
         Label(self.__root, text="Remarks : {}".format(data[12])).place(x=30, y=400)
         pass
 
+    # ---------------------
+    #  Public method of the class to display the panel
+    # ---------------------
     def deploy(self):
         self.__root.mainloop()
         pass
