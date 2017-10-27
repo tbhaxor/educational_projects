@@ -4,6 +4,8 @@ import libs.config
 import libs.addnew
 import libs.viewall
 import libs.delete
+import libs.search
+import libs.modify
 # importing built in modules
 from tkinter import *
 from tkinter.ttk import *
@@ -28,10 +30,10 @@ class Panel:
         self.__about = Button(self.__root, text="           About           ", command=self.__abt)  # about button to display the coder's name and all
 
         # Creating different buttons for different Actions
-        self.__Addnew = Button(self.__root, text="   Add New Entry   ", command = self.__new)
-        self.__Modify = Button(self.__root, text="     Modify Entry     ")
-        self.__Delete = Button(self.__root, text="      Delete Entry     ", command = self.__del)
-        self.__Search = Button(self.__root, text="      Search Entry     ")
+        self.__Addnew = Button(self.__root, text="   Add New Entry   ", command=self.__new)
+        self.__Modify = Button(self.__root, text="     Modify Entry     ", command=self.__mod)
+        self.__Delete = Button(self.__root, text="      Delete Entry     ", command=self.__del)
+        self.__Search = Button(self.__root, text="      Search Entry     ", command=self.__search)
         self.__Viewall = Button(self.__root, text="        View Entry      ", command=self.__viewall)
         pass
 
@@ -90,6 +92,19 @@ class Panel:
         panel.makepanel()
         panel.deploy()
         pass
+
+    def __search(self):
+        panel = libs.search.Search()
+        panel.makepanel()
+        panel.deploy()
+        pass
+
+    def __mod(self):
+        panel = libs.modify.Modify()
+        panel.makepanel()
+        panel.deploy()
+        pass
+
     # ------------------
     #  private method that will be invoked when user wants to check the details that who coded
     # ------------------

@@ -20,16 +20,6 @@ class Delete:
         self.__root.title("Student Management Program")
         self.__root.resizable(False, False)
 
-        # trying to connect to sql
-        try:
-            self.__conn = pymysql.connect(libs.config.dbhost, libs.config.dbuser, libs.config.dbpass, libs.config.dbname)  # connecting to sql
-            self.__curr = self.__conn.cursor()                 # getting mysql cursor
-            pass
-        except:  # this will be invoked when there is some error occurred while connecting to sql
-            messagebox.showerror("Error", "Can't establish connection with database") # displaying error message
-            sys.exit(1)   # exiting on error
-            pass
-
         # declaring widgets
         self.__l = Label(self.__root, text="Roll Number ")
         self.__e = Entry(self.__root, width=35)
@@ -44,6 +34,12 @@ class Delete:
         self.__e.place(x=110, y=20)
         self.__b.place(x=250, y=55)
         self.__e.focus()
+
+        # lifting panel to top
+        self.__root.lift()
+        self.__root.focus_force()
+        self.__root.grab_set()
+        self.__root.grab_release()
         pass
 
     # ---------------------
@@ -68,23 +64,34 @@ class Delete:
         # sql statement to delete the tuple
         sql_2 = "DELETE FROM `stumanage_students` WHERE `roll_no`='{}'".format(roll_no)
 
+        # trying to connect to sql
+        try:
+            conn = pymysql.connect(libs.config.dbhost, libs.config.dbuser, libs.config.dbpass,
+                                          libs.config.dbname)  # connecting to sql
+            curr = conn.cursor()  # getting mysql cursor
+            pass
+        except:  # this will be invoked when there is some error occurred while connecting to sql
+            messagebox.showerror("Error", "Can't establish connection with database")  # displaying error message
+            sys.exit(1)  # exiting on error
+            pass
+
         # trying to execute the query
         try:
-            self.__curr.execute(sql_1)          # executing check query
-            chk = len(self.__curr.fetchall())   # fetching all the data and counting the length
+            curr.execute(sql_1)          # executing check query
+            chk = len(curr.fetchall())   # fetching all the data and counting the length
             if chk == 0:                        # checking if roll number exists or not
                 messagebox.showwarning("Warning", "Roll Number {} doesn't exists".format(roll_no))  # displaying warning message
                 pass
             else:
-                self.__curr.execute(sql_2)      # executing delete sql query
-                self.__conn.commit()            # committing changes made on connection
+                curr.execute(sql_2)      # executing delete sql query
+                conn.commit()            # committing changes made on connection
                 messagebox.showinfo("Info", "Deleted entry for {}".format(roll_no))    # displaying information
                 pass
             pass
         except:  # this will be executed if there is some error in sql or some sql injection takes place
-            self.__conn.rollback()     # rolling back changes
+            conn.rollback()     # rolling back changes
             messagebox.showerror("Error", "Can't Execute the query")   # showing error message
             pass
-        self.__conn.close()  # closing mysql connection
+        conn.close()    # closing mysql connection
         pass
     pass

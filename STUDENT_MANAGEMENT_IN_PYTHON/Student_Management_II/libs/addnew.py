@@ -20,16 +20,6 @@ class AddNew:
         self.__root.geometry("600x450")
         self.__root.resizable(False, False)
 
-        # trying to connect to mysql
-        try:
-            self.__conn = pymysql.connect(libs.config.dbhost, libs.config.dbuser, libs.config.dbpass, libs.config.dbname) # connecting to mysql
-            self.__curr = self.__conn.cursor()    # assigning mysql cursor
-            pass
-        except:  # this will be invoked when there is some error occurred while connecting to sql
-            messagebox.showerror("Error", "Can't establish connection with database")    # displaying error message box
-            sys.exit(1)       # exiting program on error
-            pass
-
         # declaring widgets
         self.__l1 = Label(self.__root, text="Roll Number")
         self.__l2 = Label(self.__root, text="Student's Name")
@@ -93,6 +83,12 @@ class AddNew:
 
         # placing the button
         self.__add.place(x=230, y=370)
+
+        # lifting panel to top
+        self.__root.lift()
+        self.__root.focus_force()
+        self.__root.grab_set()
+        self.__root.grab_release()
         pass
 
     # ---------------------
@@ -112,6 +108,7 @@ class AddNew:
         nationality = self.__e10.get()
         address = self.__e11.get()
         remarks = self.__e12.get()
+
         # deleting the entry fields
         self.__e1.delete(0, END)
         self.__e2.delete(0, END)
@@ -133,23 +130,33 @@ class AddNew:
                 "`contact_number`, `father_c_number`, `mother_c_number`, `nationality`, `address`, `remarks`) VALUES " \
                 "('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}') ".format(roll_no, name, dob, fname, mname, email, cnum,fcnum,mcnum,nationality,address,remarks)
 
+        # trying to connect to mysql
+        try:
+            conn = pymysql.connect(libs.config.dbhost, libs.config.dbuser, libs.config.dbpass, libs.config.dbname) # connecting to mysql
+            curr = conn.cursor()    # assigning mysql cursor
+            pass
+        except:  # this will be invoked when there is some error occurred while connecting to sql
+            messagebox.showerror("Error", "Can't establish connection with database")    # displaying error message box
+            sys.exit(1)       # exiting program on error
+            pass
+
         # trying to execute the query
         try:
-            self.__curr.execute(sql_1)           # executing the check statement
-            chk = len(self.__curr.fetchall())    # fetching all data and counting
+            curr.execute(sql_1)           # executing the check statement
+            chk = len(curr.fetchall())    # fetching all data and counting
             if chk > 0:      # checks whether roll number exists or not
                 messagebox.showwarning("Warning", "Entry for {} has already been added".format(roll_no))     # showing warning message
                 pass
             else:
-                self.__curr.execute(sql_2)          # inserting values in the table
-                self.__conn.commit()                # committing changes to the connection
+                curr.execute(sql_2)          # inserting values in the table
+                conn.commit()                # committing changes to the connection
                 messagebox.showinfo("Info", "New entry for {} has been added".format(roll_no))    # showing info message
             pass
         except:      # this will be executed if there is some error in sql or some sql injection takes place
             messagebox.showerror("Error", "Can't run query")   # displaying error messagebox
             sys.exit(1)                                        # exiting system on error
             pass
-        self.__conn.close()
+        conn.close()    # closing mysql connection
         pass
 
     # ---------------------

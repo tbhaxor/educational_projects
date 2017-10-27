@@ -38,7 +38,13 @@ class ViewAll():
             tree.insert("", 0, text="Line 1", values=x)
             pass
         tree.pack()
+
+        # lifting panel to top
         self.__conn.close()
+        self.__root.lift()
+        self.__root.focus_force()
+        self.__root.grab_set()
+        self.__root.grab_release()
         pass
 
     def deploy(self):
@@ -66,7 +72,7 @@ class ViewAll():
             self.__curr.execute(sql)
             data = [x for x in self.__curr.fetchall()]
         except:
-            messagebox.showerror("Error", "Can't fetch column names")
+            messagebox.showerror("Error", "Can't fetch data")
             pass
         return data
 
