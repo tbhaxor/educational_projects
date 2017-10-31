@@ -18,8 +18,6 @@ This contains three type of programs with same db type i.e `mysql` but diffrent 
 ## Screen Shot
 ![SS](https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/Student_Management_I/SS.PNG)
 
-## Demo Video
-[![Setup and Demo](http://img.youtube.com/vi/xqhnetiqHQY/0.jpg)](http://www.youtube.com/watch?v=7jHGXLVJJBU)
 
 # What is different in these 3 projects?
 | Project | Key Feature|
