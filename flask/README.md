@@ -1,6 +1,8 @@
 Hello!
 SKYNET is web application based on flask (Micro Web Framework) in python
 
+Window Users: KINDLY USE set KEYWORD IN THE REPLACE OF export
+
 1. For running this web application on your localserver, you have to type:
 
 terminal$ export FLASK_APP=application.py
