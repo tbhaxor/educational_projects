@@ -6,8 +6,8 @@
 1. [**PHP MYSQL - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL)
 ## Python and Mysql
 1. [**Python Mysql - Student Management Program**](https://github.com/tbhaxor/school_college_projects/tree/master/STUDENT_MANAGEMENT_IN_PYTHON)
-## Only Python
-1. [**Python - Skynet -> A web application**](https://github.com/tbhaxor/school_college_projects/tree/master/flask)
+2. [**Python MySQL - Skynet -> A web application**](https://github.com/tbhaxor/school_college_projects/tree/master/flask)
+3. [**Python MySQL - Finance Program**](https://github.com/tbhaxor/school_college_projects/tree/master/finance)
 ## BASH  
 1. [**BASH - File Manager**](https://github.com/tbhaxor/school_college_projects/tree/master/FILE_MANAGER_IN_BASH)
 ## C

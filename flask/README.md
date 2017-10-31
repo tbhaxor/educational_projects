@@ -1,8 +1,14 @@
-# SKYNET - Micro Web Framework in python2
+# SKYNET - Micro Web Framework in python2 and SQL
 SKYNET is web application based on flask (Micro Web Framework) in python
 
 Window Users: KINDLY USE `set` KEYWORD IN THE REPLACE OF export
 
+# Requirements
++ sqlalchemy
++ flask
++ passlib
+
+# How To Use
 1. For running this web application on your localserver, you have to type:
 ```
 terminal$ export FLASK_APP=application.py
