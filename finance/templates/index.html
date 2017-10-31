@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome | CS50 Finance
+{% endblock %}
+
+{% block main %}
+   <table class="table table-stripped">
+       <thead>
+           <tr>
+               <th>
+                   Symbol
+               </th>
+               <th>
+                   Name
+               </th>
+               <th>
+                   Shares
+               </th>
+               <th>
+                   Price
+               </th>
+               <th>
+                   Total
+               </th>
+           </tr>
+       </thead>
+       <tfoot>
+           <tr>
+               <td colspan="4"></td>
+               <td>{{ total }}</td>
+           </tr>
+       </tfoot>
+       <tbody>
+           {% for stock in stocks %}
+               <tr>
+                   <td>{{ stock.symbol }}</td>
+                   <td>{{ stock.name }}</td>
+                   <td>{{ stock.shares }}</td>
+                   <td>{{ stock.price }}</td>
+                   <td>{{ stock.shares*stock.price }}</td>
+               </tr>
+           {% endfor %}
+               <tr>
+                   <td colspan="4">CASH</td>
+                   <td>{{ left }}</td>
+               </tr>
+       </tbody>
+   </table>
+{% endblock %}

@@ -1,0 +1,68 @@
+.navbar 
+{
+    margin-bottom: 0 !important;
+}
+#head 
+{
+    width: 100%;
+    background: #acafda;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+#head-content 
+{
+    margin-top: 150px;
+}
+#heading 
+{
+    color: #ffffff;
+    font-size: 66px;
+}
+#subheading 
+{
+    color: #fafafa;
+    font-size: 22px;
+}
+#subpart 
+{
+    background: url('../img/subpart.jpg');
+    background-size: cover;
+    background-origin: center;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+.blockquote-reverse 
+{
+    color: #fafafa;
+    font-size: 32px;
+}
+#register 
+{
+    width: 100%;
+    height: 100%;
+    background: #acafda;
+    background-image: url('../img/subpart.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.control-label, legend
+{
+    color: #fafafa !important;
+}
+#blog 
+{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/blog.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#messages 
+{
+    background: #fafafa;
+    width: 100%;
+    height: 200px;
+}
