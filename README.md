@@ -14,11 +14,9 @@
 1. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM)
 
 # Contribution Rule (To Be Strictly Followed)
-1. Add your name in this read me at [**Contributors**](#contributors) section first and wait for merge
-2. Issue should be added first adding code
-3. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
-4. Add subdirectories if same code has different implementations with same dependencies and language
-5. README.md file must exists in every directory (not subdirectories if exists) like [this](https://github.com/tbhaxor/school_college_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md)
+1. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
+2. Add subdirectories if same code has different implementations with same dependencies and language
+3. README.md file must exists in every directory (not subdirectories if exists) like [this](https://github.com/tbhaxor/school_college_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md)
 
 # How to Work as a Contributor
 1. Create a branch at local repository
