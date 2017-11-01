@@ -10,8 +10,6 @@
 3. [**Python MySQL - Finance Program**](https://github.com/tbhaxor/school_college_projects/tree/master/finance)
 ## BASH  
 1. [**BASH - File Manager**](https://github.com/tbhaxor/school_college_projects/tree/master/FILE_MANAGER_IN_BASH)
-## C
-1. [**C - School Billing System**](https://github.com/tbhaxor/school_college_projects/tree/master/C_SCHOOL_BILLING_PROGRAM)
 
 # Contribution Rule (To Be Strictly Followed)
 1. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
