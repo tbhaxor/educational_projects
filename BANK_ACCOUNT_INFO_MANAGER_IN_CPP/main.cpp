@@ -1,5 +1,6 @@
 // including standard header file an liberar
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 
@@ -11,17 +12,26 @@ using namespace Config;
 int main()
 {
   // info();
-  Bank *account = NULL;
+  Bank account;
+  fstream FILE_1, FILE_2;
   while(true)
   {
     switch (menu())
     {
       case 1:
-        cout<<"lol";
+        system("cls");
+        cout<<"\t\t\t================================"<<endl;
+        cout<<"\t\t\t=======  Add New Account  ======"<<endl;
+        cout<<"\t\t\t================================"<<endl<<endl;
+        account.get();
         break;
 
-      case 2:
-        cout<<"lolwa";
+      case 5:
+        system("cls");
+        cout<<"\t\t\t====================================="<<endl;
+        cout<<"\t\t\t=======  Viewing All Accounts  ======"<<endl;
+        cout<<"\t\t\t====================================="<<endl<<endl;
+        account.put();
         break;
 
       case 6:
