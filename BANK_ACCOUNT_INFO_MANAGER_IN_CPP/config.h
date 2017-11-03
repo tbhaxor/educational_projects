@@ -16,6 +16,7 @@ namespace Config
   int sleep_time = 300;  // in millisecs
   int loading_iteration = 4;
   char loading_chars[] = {'|', '/', '-', '\\'};
+
   void info()
   {
     system("cls");

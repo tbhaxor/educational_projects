@@ -4,18 +4,18 @@ using namespace std;
 
 Bank::Bank()
 {
-  acc_no = 0;
-  name = "";
-  balance = 0.0F;
-  type = '\0';
+  this->acc_no = 0;
+  this->name[0] = '\0';
+  this->balance = 0.0F;
+  this->type = '\0';
 }
 
 Bank::~Bank()
 {
-  acc_no = 0;
-  name = "";
-  balance = 0.0F;
-  type = '\0';
+  this->acc_no = 0;
+  this->name[0] = '\0';
+  this->balance = 0.0F;
+  this->type = '\0';
 }
 
 void Bank::get()
@@ -24,7 +24,7 @@ void Bank::get()
   cin>>this->acc_no;
   cin.ignore();
   cout<<"enter account holder's name : ";
-  getline(cin, this->name);
+  cin.getline(this->name, 50);
   cout<<"enter balance : ";
   cin>>this->balance;
   cin.ignore();
@@ -38,4 +38,9 @@ void Bank::put()
   cout<<"Account Holder Name : "<<this->name<<endl;
   cout<<"Current Balance : "<<this->balance<<endl;
   cout<<"--------------------------------------------------------"<<endl;
+}
+
+int Bank::is_acc_no()
+{
+  return this->acc_no;
 }

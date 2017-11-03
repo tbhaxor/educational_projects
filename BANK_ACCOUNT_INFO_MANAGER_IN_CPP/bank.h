@@ -1,13 +1,11 @@
 #ifndef BANK_H_
 #define BANK_H_
 
-#include <iostream>
-using namespace std;
 class Bank
 {
   int acc_no;
   float balance;
-  string name;
+  char name[50];
   char type;
 public:
   Bank();
