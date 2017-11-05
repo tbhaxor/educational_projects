@@ -10,6 +10,8 @@ The best demonstration of _file handling_ in `c++`.
 cout<<"\n\n\n\nMADE BY : your name";
 cout<<"\n\nSCHOOL : your school name";
 ```
+# NOTE
+This is only meant for Windows platform, change `system("cls")` to `system("clear")` if you want to run in linux
 
 + Build the program
 > Linux
