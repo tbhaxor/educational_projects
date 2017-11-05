@@ -37,8 +37,6 @@ g++ main.cpp bank.cpp -o program.exe
 program
 ```
 
-# NOTE
-This is only meant for Windows platform, change `system("cls")` to `system("clear")` if you want to run in linux
 
 # Screen Shots
 ![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/BANK_ACCOUNT_INFO_MANAGER_IN_CPP/Capture.PNG)
