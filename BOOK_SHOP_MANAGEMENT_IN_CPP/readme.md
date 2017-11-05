@@ -1,4 +1,4 @@
-# Bank Account Info Management in CPP
+# Book Shop Management in CPP
 The best demonstration of _file handling_ in `c++`.
 
 # Requirements
