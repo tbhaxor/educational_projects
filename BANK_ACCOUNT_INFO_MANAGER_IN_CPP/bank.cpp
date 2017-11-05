@@ -1,46 +1,74 @@
 #include "bank.h"
 #include <iostream>
+#include<iomanip>
 using namespace std;
 
-Bank::Bank()
+void Bank::create_account()
 {
-  this->acc_no = 0;
-  this->name[0] = '\0';
-  this->balance = 0.0F;
-  this->type = '\0';
+	cout<<"\nEnter The account No. :";
+	cin>>acno;
+	cout<<"\n\nEnter The Name of The account Holder : ";
+	cin.ignore();
+	cin.getline(name,50);
+	cout<<"\nEnter Type of The account (C/S) : ";
+	cin>>type;
+	type=toupper(type);
+	cout<<"\nEnter The Initial amount(>=500 for Saving and >=1000 for current ) : ";
+	cin>>deposit;
+	cout<<"\n\n\nAccount Created..";
 }
 
-Bank::~Bank()
+void Bank::show_account() const
 {
-  this->acc_no = 0;
-  this->name[0] = '\0';
-  this->balance = 0.0F;
-  this->type = '\0';
+	cout<<"\nAccount No. : "<<acno;
+	cout<<"\nAccount Holder Name : ";
+	cout<<name;
+	cout<<"\nType of Account : "<<type;
+	cout<<"\nBalance amount : "<<deposit;
 }
 
-void Bank::get()
+
+void Bank::modify()
 {
-  cout<<"enter account number : ";
-  cin>>this->acc_no;
-  cin.ignore();
-  cout<<"enter account holder's name : ";
-  cin.getline(this->name, 50);
-  cout<<"enter balance : ";
-  cin>>this->balance;
-  cin.ignore();
-  cout<<"enter type of account (C - Current or S - Saving) : ";
-  cin>>this->type;
+	cout<<"\nAccount No. : "<<acno;
+	cout<<"\nModify Account Holder Name : ";
+	cin.ignore();
+	cin.getline(name,50);
+	cout<<"\nModify Type of Account : ";
+	cin>>type;
+	type=toupper(type);
+	cout<<"\nModify Balance amount : ";
+	cin>>deposit;
 }
 
-void Bank::put()
+
+void Bank::dep(int x)
 {
-  cout<<"Account Number : "<<this->acc_no<<"\t\tAccount Type : "<<this->type<<endl;
-  cout<<"Account Holder Name : "<<this->name<<endl;
-  cout<<"Current Balance : "<<this->balance<<endl;
-  cout<<"--------------------------------------------------------"<<endl;
+	deposit+=x;
 }
 
-int Bank::is_acc_no()
+void Bank::draw(int x)
 {
-  return this->acc_no;
+	deposit-=x;
+}
+
+void Bank::report() const
+{
+	cout<<acno<<setw(10)<<" "<<name<<setw(10)<<" "<<type<<setw(6)<<deposit<<endl;
+}
+
+
+int Bank::retacno() const
+{
+	return acno;
+}
+
+int Bank::retdeposit() const
+{
+	return deposit;
+}
+
+char Bank::rettype() const
+{
+	return type;
 }

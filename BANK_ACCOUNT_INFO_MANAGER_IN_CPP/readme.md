@@ -2,19 +2,13 @@
 The best demonstration of _file handling_ in `c++`.
 
 # Requirements
-+ g++ v6 or greater
++ g++ v5 or greater
 
 # How to Run
-+ First of all modify details according to your taste in _config.h_ in following lines
++ First of all modify details according to your taste in _main.cpp_ in following lines
 ```
-// config variables
-string coder = "Gurkirat Singh";
-string submitted_to = "Mrs. Seema Sehgal";
-string institution = "MDU";
-
-// animation
-int sleep_time = 300;  // in millisecs
-int loading_iteration = 4;
+cout<<"\n\n\n\nMADE BY : your name";
+cout<<"\n\nSCHOOL : your school name";
 ```
 
 + Build the program
