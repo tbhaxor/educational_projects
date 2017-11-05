@@ -5,23 +5,24 @@ The best demonstration of _file handling_ in `c++`.
 + g++ v5 or greater
 
 # How to Run
-+ First of all modify details according to your taste in _main.cpp_ in following lines
++ First of all modify details according to your taste in _config.h_ in following lines
 ```
-cout<<"\n\n\n\nMADE BY : your name";
-cout<<"\n\nSCHOOL : your school name";
+#define CODER "Gurkirat Singh"
+#define SUBMITTED_TO "Mrs. Seema Shah"
+#define INSTITUTION "MDU Rohtak"
 ```
 
 + Build the program
 > Linux
 
 ```
-g++ program.cpp bank.cpp -o program
+g++ program.cpp book.cpp -o program
 ```
 
 > Windows  (only if g++ is added in %path%)
 
 ```
-g++ main.cpp bank.cpp -o program.exe
+g++ program.cpp book.cpp -o program.exe
 ```
 
 + Launching the application
@@ -38,4 +39,4 @@ program
 ```
 
 # Screen Shots
-![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/BANK_ACCOUNT_INFO_MANAGER_IN_CPP/Capture.PNG)
+![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/BOOK_SHOP_MANAGEMENT_IN_CPP/SS.PNG)
