@@ -38,3 +38,4 @@ program
 ```
 
 # Screen Shots
+![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/BANK_ACCOUNT_INFO_MANAGER_IN_CPP/Capture.PNG)
