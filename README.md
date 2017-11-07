@@ -21,18 +21,21 @@
 4. Projects without commenting and readme will not be merged
 5. Projects should be added in correct path
 
+# Readme Rule (only for Contributors)
+A readme should contain the following
++ Project Description
++ How to setup, with text (commands) and screen shots
+for example check [this](https://github.com/tbhaxor/educational_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md) readme
+
 # How to Work as a Contributor
 1. Create a branch at local repository
-> git checkout -b <enter_branch_name>
-
+```
+ git checkout -b <enter_branch_name>
+```
 2. Commit all the changes to current branches
 3. Test and run
 4. Finally, when everything is done push the current branch to _origin_
-> git push origin <enter_branch_name>
-
+```
+git push origin <enter_branch_name>
+```
 5. Compare and create new pull request
-# Contributors
-### Gurkirat Singh (owner)
-+ [**facebook**](https://facebook.com/gurkirat.py)
-+ [**Email Address**](mailto:tbhaxor@gmail.com)
-+ [**Github**](https://github.com/tbhaxor)
