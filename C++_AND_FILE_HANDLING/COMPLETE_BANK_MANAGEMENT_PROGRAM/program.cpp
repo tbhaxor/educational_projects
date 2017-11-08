@@ -15,7 +15,7 @@ int menu();
 int main()
 {
   // invoking info function
-  // info();
+  info();
   // infinite loop which will be breaked if user selects 9
   while(true)
   {
