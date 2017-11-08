@@ -22,6 +22,11 @@
 4. Projects without commenting and readme will not be merged
 5. Projects should be added in correct path
 
+# Downloading A Particular Projects
+1. Locate the project in repo
+```
+suppose i want to download **Finance Program**
+```
 # Readme Rule (only for Contributors)
 A readme should contain the following
 + Project Description
