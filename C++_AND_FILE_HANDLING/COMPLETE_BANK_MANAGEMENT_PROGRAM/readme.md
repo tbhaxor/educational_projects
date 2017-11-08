@@ -1,4 +1,4 @@
-# Complete Bank Management PRogream
+# Complete Bank Management Program
 Another program enhanced from _Bank Account Info Management program_ in `c++` implementing file handling (text + binary)
 Now user can perform various functions with just one program
 
