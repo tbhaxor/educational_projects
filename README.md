@@ -23,10 +23,14 @@
 5. Projects should be added in correct path
 
 # Downloading A Particular Projects
-1. Locate the project in repo
+1. Locate the project in repo and copy the link
 ```
-suppose i want to download <b>Finance Program</b>
+suppose i want to download Finance Program. right click on the text and click - "Copy Link Address" (in chrome)
+                                                                                 "Copy Link Location" (in firefox)
 ```
+2. Paste the link in the `INPUT BOX` in https://minhaskamal.github.io/DownGit/#/home
+3. Click Download Button
+
 # Readme Rule (only for Contributors)
 A readme should contain the following
 + Project Description
