@@ -27,31 +27,31 @@ int main()
         add_new();
       break;
       case 2:
-        // invoking add_new function
+        // invoking del_ete function
         del_ete();
       break;
       case 3:
-        // invoking add_new function
-        add_new();
+        // invoking modify function
+        modify();
       break;
       case 4:
-        // invoking add_new function
+        // invoking create_trans function
         create_trans();
       break;
       case 5:
-        // invoking add_new function
+        // invoking show_trans function
         show_trans();
       break;
       case 6:
-        // invoking add_new function
+        // invoking show_all function
         show_all();
       break;
       case 7:
-        // invoking add_new function
+        // invoking search function
         search();
       break;
       case 8:
-        // invoking add_new function
+        // part_trans add_new function
         part_trans();
       break;
       case 9:

@@ -2,6 +2,7 @@
 #include "bank.h"
 using namespace std;
 
+// defining constructor
 Bank::Bank()
 {
   this->acc_type = '\0';
@@ -10,6 +11,7 @@ Bank::Bank()
   this->balance = 0.0F;
 }
 
+// defining member functions
 void Bank::get_details()
 {
   cout<<"enter account number : ";
@@ -41,20 +43,45 @@ void Bank::show_details()
 
 int Bank::is_acc_no()
 {
-  return this->acc_number;
+  return this->acc_number;   // returning account number on the current position
 }
 
 float Bank::get_curr_bal()
 {
-  return this->balance;
+  return this->balance;   // returning balance on the current position
 }
 
 void Bank::credit(float ammount)
 {
-  this->balance += ammount;
+  this->balance += ammount;      // incrementing balance on credit
 }
 
 void Bank::debit(float ammount)
 {
-  this->balance -= ammount;
+  this->balance -= ammount;    // decreasing balance on debits
+}
+
+void Bank::modify()
+{
+  int opt;
+  cout<<"What do you want to change ?"<<endl;
+  cout<<"1. Name\t\t2. Email\t\t3. Phone Number\n> ";
+  cin>>opt;
+  cin.ignore();   // ignoring input stream buffer
+  switch (opt)
+  {
+    case 1:
+      cout<<"enter new name : ";
+      cin.getline(this->name, 30);            // overwriting existing values
+    break;
+    case 2:
+      cout<<"enter new email : ";
+      cin.getline(this->email, 30);            // overwriting existing values
+    break;
+    case 3:
+      cout<<"enter new phone number : ";
+      cin>>this->phone_number;            // overwriting existing values
+      cin.ignore();   // ignoring input stream buffer
+    break;
+  }
 }
