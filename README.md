@@ -25,7 +25,7 @@
 # Downloading A Particular Projects
 1. Locate the project in repo
 ```
-suppose i want to download **Finance Program**
+suppose i want to download <b>Finance Program</b>
 ```
 # Readme Rule (only for Contributors)
 A readme should contain the following
