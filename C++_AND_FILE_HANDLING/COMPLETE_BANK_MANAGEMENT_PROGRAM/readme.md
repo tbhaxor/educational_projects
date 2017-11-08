@@ -13,7 +13,7 @@ Now user can perform various functions with just one program
 #define SUBMITTED_TO "Mrs. Seema Shah"
 #define INSTITUTION "MDU Rohtak"
 ```
-
++ In linux change `#define CLEAR "cls"` to `#define CLEAR "clear"`
 + Build the program
 > Linux
 
