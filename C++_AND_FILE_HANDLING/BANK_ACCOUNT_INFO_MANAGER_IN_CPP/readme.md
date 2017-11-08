@@ -39,4 +39,4 @@ program
 
 
 # Screen Shots
-![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/_AND_FILE_HANDLING/BANK_ACCOUNT_INFO_MANAGER_IN_CPP/Capture.PNG)
+![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/C++_AND_FILE_HANDLING/BANK_ACCOUNT_INFO_MANAGER_IN_CPP/Capture.PNG)
