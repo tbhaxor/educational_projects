@@ -2,13 +2,18 @@
 #define COMPANY_H
 
 #include "employee.h"
+
 // all properties of a department will be added
-class Company : protected Employee
+class Company
 {
+  int id;
   char name[30];
 public:
-  void get();
-  void show();
+  Company();
+  void get_details();
+  void show_details();
+  int get_id();
+  char* get_name();
 };
 
 #endif

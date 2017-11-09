@@ -18,17 +18,18 @@ int main()
   {
     switch (menu())
     {
+      // invoking functions according to case selection
       case 1:
-
+        add_dept();
       break;
       case 2:
-
+        add_emp();
       break;
       case 3:
-
+        del_emp();
       break;
       case 4:
-
+        del_dept();
       break;
       case 5:
 
@@ -43,6 +44,9 @@ int main()
 
       break;
       case 9:
+        show_all();
+      break;
+      case 0:
         return 0;
       default:
       cout<<"[!] Invalid Selection";
@@ -69,15 +73,16 @@ int menu()
   cout<<"\t\t\t##                 MENU                 ##"<<endl;
   cout<<"\t\t\t##                                      ##"<<endl;
   cout<<"\t\t\t##########################################"<<endl<<endl<<endl;
-  cout<<"1. Add New Employee"<<endl;
-  cout<<"2. Delete Employe"<<endl;
-  cout<<"3. Delete Department"<<endl;
-  cout<<"4. Modify Employee Details"<<endl;
-  cout<<"5. Modify Department Details"<<endl;
-  cout<<"6. Search Department"<<endl;
-  cout<<"7. Search Employee"<<endl;
-  cout<<"8. List All"<<endl;
-  cout<<"9. Quit"<<endl;
+  cout<<"1. Add New Department"<<endl;
+  cout<<"2. Add New Employee"<<endl;
+  cout<<"3. Delete Employee"<<endl;
+  cout<<"4. Delete Department"<<endl;
+  cout<<"5. Modify Employee Details"<<endl;
+  cout<<"6. Modify Department Details"<<endl;
+  cout<<"7. Search Department"<<endl;
+  cout<<"8. Search Employee"<<endl;
+  cout<<"9. List All"<<endl;
+  cout<<"0. Quit"<<endl;
   cout<<"> ";
   cin>>opt;
   cin.ignore();

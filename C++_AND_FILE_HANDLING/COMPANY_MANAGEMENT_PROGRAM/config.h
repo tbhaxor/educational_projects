@@ -8,7 +8,8 @@
 
 // Database File Configs
 #define CLEAR "cls"
-#define MAIN_FILE "DATA"
+#define EMP_FILE "EMPLOYEE"
+#define DEPT_FILE "DEPTS"
 #define TEMP_FILE "TEMP"
 
 #endif
