@@ -23,10 +23,6 @@ void Company::show_details()
   cout<<setw(10)<<this->id<<setw(30)<<this->name<<endl;
 }
 
-char* Company::get_name()
-{
-  return this->name;
-}
 
 int Company::get_id()
 {

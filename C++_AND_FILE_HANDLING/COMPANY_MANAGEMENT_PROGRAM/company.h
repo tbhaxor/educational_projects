@@ -13,7 +13,6 @@ public:
   void get_details();
   void show_details();
   int get_id();
-  char* get_name();
 };
 
 #endif

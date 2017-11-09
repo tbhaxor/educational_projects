@@ -29,8 +29,6 @@ namespace Actions
   }
   void add_emp()
   {
-    char* name;
-    int dep_id;
     system(CLEAR);
     cout<<"\t\t\t##########################################"<<endl;
     cout<<"\t\t\t##                                      ##"<<endl;
@@ -40,31 +38,10 @@ namespace Actions
     Company cp;
     Employee ep;
     ofstream file;
-    ifstream comp;
     file.open(EMP_FILE, ios::binary|ios::app);
-    comp.open(DEPT_FILE, ios::binary);
-    cout<<"enter department id : ";
-    cin>>dep_id;
-    cin.ignore();
-    if(!comp)
-    {
-      cout<<"[!] Departments file not found";
-    }
-    else
-    {
-      comp.seekg(0, ios::beg);
-      while(comp.read((char*)(&cp), sizeof(Company)))
-      {
-        if (cp.get_id() == dep_id)
-        {
-          name = cp.get_name();
-        }
-      }
-    }
-    ep.get_details(name);
+    ep.get_details();
     file.write((char*)(&ep), sizeof(Employee));
     file.close();
-    comp.close();
   }
 
   void show_all()
@@ -123,7 +100,7 @@ namespace Actions
   void del_emp()
   {
     int id;
-    Company cp;
+    Employee ep;
     system(CLEAR);
     cout<<"\t\t\t##########################################"<<endl;
     cout<<"\t\t\t##                                      ##"<<endl;
@@ -132,7 +109,7 @@ namespace Actions
     cout<<"\t\t\t##########################################"<<endl<<endl<<endl;
     ifstream file;
     ofstream temp;
-    file.open("MAIN_FILE", ios::binary);
+    file.open(EMP_FILE, ios::binary);
     temp.open(TEMP_FILE, ios::binary);
     if(!file)
     {
@@ -144,14 +121,18 @@ namespace Actions
       cin>>id;
       cin.ignore();
       file.seekg(0, ios::beg);
-      while(file.read((char*)(&cp), sizeof(Company)))
+      while(file.read((char*)(&ep), sizeof(Employee)))
       {
+        if(ep.get_id() != id)
+        {
+          temp.write((char*)(&ep), sizeof(Employee));
+        }
       }
     }
     file.close();
     temp.close();
-    remove("MAIN_FILE");
-    rename(TEMP_FILE, "MAIN_FILE");
+    remove(EMP_FILE);
+    rename(TEMP_FILE, EMP_FILE);
   }
 
   void del_dept()
@@ -166,7 +147,7 @@ namespace Actions
     cout<<"\t\t\t##########################################"<<endl<<endl<<endl;
     ifstream file;
     ofstream temp;
-    file.open("MAIN_FILE", ios::binary);
+    file.open(DEPT_FILE, ios::binary);
     temp.open(TEMP_FILE, ios::binary);
     if(!file)
     {
@@ -180,12 +161,16 @@ namespace Actions
       file.seekg(0, ios::beg);
       while(file.read((char*)(&cp), sizeof(Company)))
       {
+        if(cp.get_id() != id)
+        {
+          temp.write((char*)(&cp), sizeof(Company));
+        }
       }
     }
     file.close();
     temp.close();
-    remove("MAIN_FILE");
-    rename(TEMP_FILE, "MAIN_FILE");
+    remove(DEPT_FILE);
+    rename(TEMP_FILE, DEPT_FILE);
   }
 
 

@@ -1,18 +1,18 @@
 #include <iostream>
-#include <cstring>
 #include "employee.h"
 using namespace std;
 
 Employee::Employee()
 {
   this->name[0] = this->post[0] = this->address[0] = this->join_date[0] =  '\0';
-  this->department[0] = '\0';
-  this->id = 0;
+  this->id = this->department =0;
   this->salary = 0.0F;
 }
-void Employee::get_details(char* dep_name)
+void Employee::get_details()
 {
-  strcpy(this->department, dep_name);
+  cout<<"enter department id : ";
+  cin>>this->department;
+  cin.ignore();
   cout<<"enter employee id : ";
   cin>>this->id;
   cin.ignore();
