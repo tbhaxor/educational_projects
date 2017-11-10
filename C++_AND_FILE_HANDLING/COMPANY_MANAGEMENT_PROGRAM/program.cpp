@@ -1,4 +1,4 @@
-// incling header files and lliberaries
+// including header files and lliberaries
 #include <iostream>
 #include <cstdlib>
 #include "actor.h"
@@ -13,6 +13,7 @@ void info();
 
 int main()
 {
+  // invoking info function
   info();
   while(true)
   {
@@ -32,16 +33,16 @@ int main()
         del_dept();
       break;
       case 5:
-
+        mod_emp();
       break;
       case 6:
-
+        mod_dept();
       break;
       case 7:
-
+        search_dept();
       break;
       case 8:
-
+      search_emp();
       break;
       case 9:
         show_all();
@@ -51,7 +52,7 @@ int main()
       default:
       cout<<"[!] Invalid Selection";
     }
-    pause();
+    pause(); // pausing output screen
   }
   return 0;
 }
@@ -67,7 +68,7 @@ void pause()
 int menu()
 {
   int opt;
-  system(CLEAR);
+  system(CLEAR); // clearing output screen
   cout<<"\t\t\t##########################################"<<endl;
   cout<<"\t\t\t##                                      ##"<<endl;
   cout<<"\t\t\t##                 MENU                 ##"<<endl;
@@ -84,15 +85,15 @@ int menu()
   cout<<"9. List All"<<endl;
   cout<<"0. Quit"<<endl;
   cout<<"> ";
-  cin>>opt;
-  cin.ignore();
+  cin>>opt; //  getting selection
+  cin.ignore();   // ignoring input stream buffer
   return opt;
 }
 
 // defining info function
 void info()
 {
-  system(CLEAR);
+  system(CLEAR); // clearing output screen
   cout<<"\t\t\t##########################################"<<endl;
   cout<<"\t\t\t##                                      ##"<<endl;
   cout<<"\t\t\t##      Company Management Program      ##"<<endl;
@@ -101,5 +102,5 @@ void info()
   cout<<"Coded By : "<<CODER<<endl;
   cout<<"Submitted To : "<<SUBMITTED_TO<<endl;
   cout<<"Institution : "<<INSTITUTION<<endl;
-  pause();
+  pause();   // pausing the output screen
 }

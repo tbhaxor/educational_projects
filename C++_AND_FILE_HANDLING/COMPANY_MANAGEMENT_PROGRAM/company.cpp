@@ -13,7 +13,7 @@ void Company::get_details()
 {
   cout<<"enter department id :";
   cin>>this->id;
-  cin.ignore();
+  cin.ignore();   // ignoring input stream buffer
   cout<<"enter department name : ";
   cin.getline(this->name, 30);
 }
@@ -27,4 +27,10 @@ void Company::show_details()
 int Company::get_id()
 {
   return this->id;
+}
+
+void Company::modify()
+{
+  cout<<"enter new department name : ";
+  cin.getline(this->name, 30);
 }

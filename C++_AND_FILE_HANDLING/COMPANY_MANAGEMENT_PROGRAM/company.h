@@ -12,6 +12,7 @@ public:
   Company();
   void get_details();
   void show_details();
+  void modify();
   int get_id();
 };
 
