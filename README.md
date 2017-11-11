@@ -3,18 +3,18 @@
 
 # Projects
 ## C++ and File Handling
-1. [**Book Shop Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/C++_AND_FILE_HANDLING/BOOK_SHOP_MANAGEMENT_IN_CPP)
-2. [**BANK ACCOUNT INFO MANAGER Program**](https://github.com/tbhaxor/educational_projects/tree/master/C++_AND_FILE_HANDLING/BANK_ACCOUNT_INFO_MANAGER_IN_CPP)
+1. [**Book Shop Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/C++_AND_FILE_HANDLING/BOOK_SHOP_MANAGEMENT)
+2. [**BANK ACCOUNT INFO MANAGER Program**](https://github.com/tbhaxor/educational_projects/tree/master/C++_AND_FILE_HANDLING/BANK_ACCOUNT_INFO_MANAGER)
 3. [**Complete Bank Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/C++_AND_FILE_HANDLING/COMPLETE_BANK_MANAGEMENT_PROGRAM)
 3. [**Company Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/C++_AND_FILE_HANDLING/COMPANY_MANAGEMENT_PROGRAM)
 ## PHP and Mysql
-1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PHP_AND_MYSQL/STUDENT_MANAGEMENT_IN_PHP_MYSQL)
+1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PHP_AND_MYSQL/STUDENT_MANAGEMENT)
 ## Python and Mysql
-1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT_IN_PYTHON)
-2. [**Skynet - A web application**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/flask)
-3. [**Finance Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/finance)
+1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT)
+2. [**Skynet - A web application**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/SIMPLE_WEB_APPLICATION_USING_FLASK)
+3. [**Finance Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/FINANCE_PROGRAM_USING_FLASK)
 ## BASH  
-1. [**File Manager**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER_IN_BASH)
+1. [**File Manager**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER)
 
 # Contribution Rule (To Be Strictly Followed)
 1. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
