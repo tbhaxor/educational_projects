@@ -1,13 +1,17 @@
+// including all headers and liberaries
 #include <iostream>
 #include "employee.h"
 using namespace std;
 
+// defining Employee Class Constructor
 Employee::Employee()
 {
   this->name[0] = this->post[0] = this->address[0] = this->join_date[0] =  '\0';
   this->id = this->department =0;
   this->salary = 0.0F;
 }
+
+// defining get_details method
 void Employee::get_details()
 {
   cout<<"enter department id : ";
@@ -29,6 +33,7 @@ void Employee::get_details()
   cin.ignore();   // ignoring input stream buffer
 }
 
+// defining show_details method
 void Employee::show_details()
 {
   cout<<"Employee ID : "<<this->id<<"\t\t\tEmployee Name : "<<this->name<<endl;
@@ -39,11 +44,13 @@ void Employee::show_details()
   cout<<"-----------------------------------------------------------------------"<<endl;
 }
 
+// defining get_id method
 int Employee::get_id()
 {
   return this->id;
 }
 
+// defining modify method
 void Employee::modify()
 {
   int opt;
