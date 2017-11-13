@@ -15,7 +15,7 @@
 3. [**Finance Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/FINANCE_PROGRAM_USING_FLASK)
 ## BASH  
 1. [**File Manager**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER)
-2. [**File Manager 2**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER)
+
 # Contribution Rule (To Be Strictly Followed)
 1. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
 2. Add subdirectories if same code has different implementations with same dependencies and language
