@@ -15,7 +15,7 @@
 3. [**Finance Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/FINANCE_PROGRAM_USING_FLASK)
 ## BASH  
 1. [**File Manager**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER)
-
+2. [**File Manager 2**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER)
 # Contribution Rule (To Be Strictly Followed)
 1. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
 2. Add subdirectories if same code has different implementations with same dependencies and language
@@ -24,14 +24,7 @@
 5. Projects should be added in correct path
 
 # Downloading A Particular Projects
-1. Locate the project in repo and copy the link
-```
-suppose i want to download Finance Program. right click on the text and click - "Copy Link Address" (in chrome)
-                                                                                 "Copy Link Location" (in firefox)
-```
-2. Paste the link in the `INPUT BOX` in https://minhaskamal.github.io/DownGit/#/home
-3. Click Download Button
-
+Visit https://ed-down.herokuapp.com/
 # Readme Rule (only for Contributors)
 A readme should contain the following
 + Project Description
