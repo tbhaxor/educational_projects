@@ -6,8 +6,8 @@ using namespace std;
 // making a user defined data type for Student Details
 struct Student
 {
-	int rollno,id;
-	float sujbects[TOTAL_SUBJECTS], average;
+	int rollno;
+	float marks[TOTAL_SUBJECTS], average;
 	char name[30], email[30];
 	long unsigned int phoneNumber;
 	Student* next;
@@ -39,16 +39,35 @@ int main()
 				cout<<"------------------------------------"<<endl<<endl;
 				tmp = new Student;  // allocating memory to temporary pointer
 				// getting values for student
-				cout<<"enter id : ";
-				cin>>tmp->id;
-				cin.ignore();   // ignoring input stream buffer
 				cout<<"enter roll number : ";
 				cin>>tmp->rollno;
 				cin.ignore();   // ignoring input stream buffer
 				cout<<"enter name : ";
-				cin,getline(tmp->name, 30);
-				cout<<
+				cin.getline(tmp->name, 30);
+				cout<<"enter email : ";
+			        cin.getline(tmp->email, 30);
+				cout<<"enter phone number : ";
+				cin>>tmp->phoneNumber;
+				cin.ignore();   // ignoring input stream buffer
+				cout<<"enter marks of 5 subjects \n";
+				for(int i = 0; i < TOTAL_SUBJECTS; i++)
+					cin>>tmp->marks[i];
+				cin.ignore();  // ignoring input stream buffer
+				tmp->average = average(tmp->marks);
+				cout<<"calculated average : "<<tmp->average;
 
+				// now adding data to stack
+				if (st == NULL)       
+				{
+					st = new Student;
+					tmp->next = NULL;
+					st = tmp;
+				}
+				else
+				{
+					tmp->next = st;
+					st = tmp;
+				}
 				delete tmp;    // deallocating memory to temporary pointer
 				break;
 			case 2:
@@ -56,6 +75,24 @@ int main()
 				break;
 			case 3:
 				system(CLEAR);   // clearing output screen
+				cout<<"------------------------------------"<<endl;
+				cout<<"-    Listing All Student Details   -"<<endl;
+				cout<<"------------------------------------"<<endl<<endl;
+				if(st == NULL)
+				{
+					cout<<"[!] No student has been added yet";
+				}
+				else
+				{
+					tmp = new Student;
+					tmp = st;
+					while(tmp!=NULL)
+					{
+						cout<<tmp->name<<endl;
+						tmp = tmp->next;
+					}
+					delete tmp;
+				}
 				break;
 			case 4:
 				system(CLEAR);   // clearing output screen
