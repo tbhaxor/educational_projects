@@ -64,7 +64,8 @@ void Library::modify()
 		case 3:
 			cout<<"enter new salary amount : ";
 			cin>>this->salary;  // overwriting salary value
+			cin.ignore(); // ignoring input stream buffer
 			break;
 	}
-	cin.ignore(); // ignoring input stream buffer
+	
 }	
