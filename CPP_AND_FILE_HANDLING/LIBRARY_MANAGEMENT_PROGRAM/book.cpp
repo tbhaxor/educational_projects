@@ -14,7 +14,7 @@ Book::Book()
 // defining get method of class Book
 void Book::get()
 {
-	cout<<"enter book id ";
+	cout<<"enter book id : ";
 	cin>>this->id;  // getting book id
 	cin.ignore();   // ignoring input stream buffer
 	cout<<"enter book title : ";
@@ -52,5 +52,25 @@ void Book::modify()
 	cout<<"1. Title\t2. Author\t3. Price\t4. Quantity\n> ";
 	cin>>opt;   // getting user selection
 	cin.ignore();  // ignore input stream buffer
-	switch(opt)
+	switch(opt)   // using switch-case to handle user input selection
+	{
+		case 1:
+			cout<<"enter new book title title : ";
+			cin.getline(this->title, 30);   // overwriting exiting title
+			break;
+		case 2:
+			cout<<"enter new author name : ";
+			cin.getline(this->author, 30);   // overwriting exiting author
+			break;
+		case 3:
+			cout<<"enter new price : ";
+			cin>>this->price;   // overwriting previous price
+			cin.ignore();   // ignoring input stream buffer
+			break;
+		case 4:
+			cout<<"enter new quantity : ";
+			cin>>this->quantity;   // overwriting previous quantity
+			cin.ignore();   // ignoring input stream buffer
+			break;
+	}
 }

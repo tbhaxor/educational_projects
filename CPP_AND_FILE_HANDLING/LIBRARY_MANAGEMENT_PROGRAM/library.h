@@ -12,7 +12,7 @@ public:
 	void get();
 	void show();
 	bool is_ID(int);
-	void modify()
+	void modify();
 };
 
 #endif

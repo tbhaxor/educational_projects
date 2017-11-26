@@ -67,5 +67,4 @@ void Library::modify()
 			cin.ignore(); // ignoring input stream buffer
 			break;
 	}
-	
 }	
