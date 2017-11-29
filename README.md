@@ -2,6 +2,7 @@
 > A repository having some projects that are assigned in schools and projects. This is only for educational purpose
 
 # Projects
+
 ## C++ and File Handling
 1. [**Book Shop Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/CPP_AND_FILE_HANDLING/BOOK_SHOP_MANAGEMENT)
 2. [**Bank Account Info Manager Program**](https://github.com/tbhaxor/educational_projects/tree/master/CPP_AND_FILE_HANDLING/BANK_ACCOUNT_INFO_MANAGER)
@@ -11,12 +12,18 @@
 
 ## PHP and Mysql
 1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PHP_AND_MYSQL/STUDENT_MANAGEMENT)
+
+## HTML and Javascript
+1. [**String Encoding and Decoding Program**](https://github.com/tbhaxor/educational_projects/tree/master/HTML_AND_JAVASCRIPT/ENCODING_AND_DECODING_PROGRAM)
+
 ## Python and Mysql
 1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT)
 2. [**Skynet - A web application**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/SIMPLE_WEB_APPLICATION_USING_FLASK)
 3. [**Finance Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/FINANCE_PROGRAM_USING_FLASK)
+
 ## BASH  
 1. [**File Manager**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER)
+
 
 # Contribution Rule (To Be Strictly Followed)
 1. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
