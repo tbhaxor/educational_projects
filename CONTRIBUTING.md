@@ -17,3 +17,9 @@
 git push origin <enter_branch_name>
 ```
 5. Compare and create new pull request
+
+# Readme Rule (only for Contributors)
+A readme should contain the following
++ Project Description
++ How to setup, with text (commands) and screen shots
+for example check [this](https://github.com/tbhaxor/educational_projects/blob/master/STUDENT_MANAGEMENT_IN_PHP_MYSQL/README.md) readme
