@@ -3,8 +3,7 @@
 
 # Projects
 
-## C
-1. [**Lucky 7 Game**](https://github.com/tbhaxor/educational_projects/tree/master/C/LUCKY_7)
+
 ## C++ and File Handling
 1. [**Book Shop Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/CPP_AND_FILE_HANDLING/BOOK_SHOP_MANAGEMENT)
 2. [**Bank Account Info Manager Program**](https://github.com/tbhaxor/educational_projects/tree/master/CPP_AND_FILE_HANDLING/BANK_ACCOUNT_INFO_MANAGER)
@@ -19,6 +18,9 @@
 1. [**Snake Game using Applets**](https://github.com/tbhaxor/educational_projects/tree/master/CORE_JAVA/SNAKE_GAME)
 ## HTML and Javascript
 1. [**String Encoding and Decoding Program**](https://github.com/tbhaxor/educational_projects/tree/master/HTML_AND_JAVASCRIPT/ENCODING_AND_DECODING_PROGRAM)
+
+## C
+1. [**Lucky 7 Game**](https://github.com/tbhaxor/educational_projects/tree/master/C/LUCKY_7)
 
 ## Python and Mysql
 1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT)
