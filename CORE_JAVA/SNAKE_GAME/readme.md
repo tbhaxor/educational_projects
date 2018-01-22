@@ -15,4 +15,5 @@ cd src/
 ```
 java Main.class
 ```
-*NOTE :*For windows user , add `java` in environment PATH variable
+
+**NOTE :** For windows user , add `java` in environment PATH variable
