@@ -4,10 +4,10 @@
 
 // function prototyping
 int get_invoice_number();
-void create_invoice();
-void delete_invoice(int);
+void create_order();
+void delete_order(int);
 void list_all();
-void search_invoice(int);
+void search_order(int);
 void clrscr();
 void menu();
 void info();
@@ -31,7 +31,25 @@ struct Order {
 int main() {
     int opt;
     info();
-    return 0;
+    while(1) {
+        menu();  // printing menu
+        scanf("%d", &opt);  // getting user input for option 
+        switch(opt) {
+        case 1:  // case to create order
+            break;
+        case 2:  // case to delete existing order
+            break;
+        case 3:  // case to display all the details
+            break; 
+        case 4:  // case to search order from the db
+            break;
+        case 5:
+            return 0;  // exit program on user selection = 5 i.e Exit
+        default:
+
+        }
+        pause() // pausing the output screen
+    }
 }
 
 // function info definition for printing coder details
@@ -48,11 +66,27 @@ void info() {
     pause();  // pausing screen output
 }
 
+// function pause definition for pausing the output screen
 void pause() {
     printf("[!] Press any key to continue ...");
     getchar();  // wait until enter is pressed
 }
 
+// function clrscr definition for clear output screen
 void clrscr() {
     system(CLEAR);  // running system command to clear the screen
+}
+
+// function menu to display available functions
+void menu() {
+    clrscr(); // clearing screen
+    printf("------------------------------------------------\n");
+    printf("-                     MENU                     -\n");
+    printf("------------------------------------------------\n\n");
+    printf("1. Create New Order\n");
+    printf("2. Delete Existing Order\n");
+    printf("3. Display All Orders\n");
+    printf("4. Search Order\n");
+    printf("5. Exit\n");
+    printf("> ");
 }
