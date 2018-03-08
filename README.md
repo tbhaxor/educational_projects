@@ -8,6 +8,8 @@
 ## Only C
 1. [**Lucky 7 Game**](https://github.com/tbhaxor/educational_projects/tree/master/C/LUCKY_7)
 
+## C and File Handling
+1. [**Cafeterial Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/C_AND_FILE_HANDLING/CAFETERIA_ODERING_PROGRAM)
 ## C++ and File Handling
 1. [**Book Shop Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/CPP_AND_FILE_HANDLING/BOOK_SHOP_MANAGEMENT)
 2. [**Bank Account Info Manager Program**](https://github.com/tbhaxor/educational_projects/tree/master/CPP_AND_FILE_HANDLING/BANK_ACCOUNT_INFO_MANAGER)
