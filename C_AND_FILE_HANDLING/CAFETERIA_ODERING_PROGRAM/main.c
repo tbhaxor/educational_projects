@@ -48,6 +48,7 @@ int main() {
             list_all(); // this call will display all the details
             break;
         case 4:  // case to search order from the db
+            search_order(); // this call will search for order in DB and it will display its details
             break;
         case 5:
             return 0;  // exit program on user selection = 5 i.e Exit
@@ -122,7 +123,7 @@ void create_order() {
     
     // getting values for Customer and  Order
     printf("enter item name : ");
-    gets(o.item); // getting item name
+    fgets(o.item, sizeof(o.item), stdin); // getting item name
     printf("enter item price : ");
     scanf("%f", &o.price);  // getting price per peice
     clear_input_buffer(); // clearing input buffer
@@ -130,7 +131,7 @@ void create_order() {
     scanf("%d", &o.quantity);  // getting number of items purchased
     clear_input_buffer();  // clearing input buffer
     printf("enter customer name : ");
-    gets(c.name);   // getting customer name
+    fgets(c.name, sizeof(c.name), stdin);   // getting customer name
     printf("enter customer number : ");
     scanf("%ld", &c.pno);  // getting customer phone number
     clear_input_buffer(); // clearing input buffer
@@ -183,13 +184,13 @@ void delete_order() {
     order = fopen(MAIN_FILE_O, "r");    // creating the input file stream  for order
     tc = fopen(TEMP_FILE_c, "w"); // creating the output file stream in append binary for customer temp
     to = fopen(TEMP_FILE_o, "w");    // creating the output file stream in append binary for order temp
-    while (fread(&c, sizeof(struct Customer), 1, customer) && fread(&o, sizeof(struct Order), 1, order)){
+    while (fread(&c, sizeof(struct Customer), 1, customer) && fread(&o, sizeof(struct Order), 1, order)){ // reading file 
        if(c.invoice == i && o.invoice == i){
            found = true;
        }
        else {
-           fwrite(&c, sizeof(struct Customer), 1, tc);
-           fwrite(&o, sizeof(struct Order), 1, to);
+           fwrite(&c, sizeof(struct Customer), 1, tc);  // writing unmatched data to temp file of customer
+           fwrite(&o, sizeof(struct Order), 1, to); // writing unmatched data to temp file of order
        }
     }
     fclose(customer); // closing input file stream for customer
@@ -200,4 +201,40 @@ void delete_order() {
     remove(MAIN_FILE_O); // deleting old db file for order
     rename(TEMP_FILE_c, MAIN_FILE_C); // renaming temp file to main file for customers
     rename(TEMP_FILE_o, MAIN_FILE_O); // renaming temp file to main file for orders
+    if (!found) {  // to print message about ID Not found
+        printf("[x] Order '%d' not found", i);
+    }
+}
+
+// function search_order definition to search order in the db
+void search_order() {
+    clrscr(); // clearing screen
+    printf("------------------------------------------------\n");
+    printf("-                 Search Order                 -\n");
+    printf("------------------------------------------------\n\n");
+    int i;              // variable for storing invoice number
+    bool found = false; // setting found to false, order not found
+    struct Customer c;  // object of Customer type
+    struct Order o;     // object of Order type
+    printf("enter order number : ");
+    scanf("%d", &i);      // getting order number from user
+    clear_input_buffer(); // clearing input buffer
+    FILE *customer, *order;  // defined two FILE class pointer
+    customer = fopen(MAIN_FILE_C, "r"); // creating the input file stream for customer
+    order = fopen(MAIN_FILE_O, "r");    // creating the input file stream  for order
+    while (fread(&c, sizeof(struct Customer), 1, customer) && fread(&o, sizeof(struct Order), 1, order)) { // reading file
+        if (c.invoice == i && o.invoice == i) {
+            found = true;
+            printf("Order Number : %d\n", c.invoice);
+            printf("Customer Name : %s\t\tCustomer Phone Number : %ld\n", c.name, c.pno);
+            printf("Item Name : %s\n", o.item);
+            printf("Item Quantity : %d\t\tTotal Cost : %.2f\n", o.quantity, o.quantity * o.price);
+            printf("----------------------------------------------\n");
+        }
+    }
+    fclose(customer); // closing input file stream for customer
+    fclose(order);    // closing  input file stream for order
+    if (!found) { // to print message about ID Not found
+        printf("[x] Order '%d' not found", i);
+    }
 }
