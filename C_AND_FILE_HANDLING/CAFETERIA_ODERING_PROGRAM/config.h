@@ -7,9 +7,10 @@
 #define INSTITUTION "MDU Rohtak"
 
 // program config
-#define MAIN_FILE "caft.bin"
-#define TEMP_FILE "tmp.bin"
-#define INVOICE_LENGTH 16
+#define MAIN_FILE_C "customer.bin"
+#define MAIN_FILE_O "orders.bin"
+#define TEMP_FILE_c "tmpc.bin"
+#define TEMP_FILE_o "tmpo.bin"
 #define CLEAR "clear" // change clear to cls if you are on windows
 
 #endif
