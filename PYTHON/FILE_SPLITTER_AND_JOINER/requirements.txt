@@ -1,0 +1,5 @@
+argparse
+colorama
+pynimations
+pbars
+termisize
