@@ -25,6 +25,8 @@
 ## HTML and Javascript
 1. [**String Encoding and Decoding Program**](https://github.com/tbhaxor/educational_projects/tree/master/HTML_AND_JAVASCRIPT/ENCODING_AND_DECODING_PROGRAM)
 
+## Only Python
+1. [**Splity**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON/FILE_SPLITTER_AND_JOINER)
 
 ## Python and Mysql
 1. [**Student Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT)
