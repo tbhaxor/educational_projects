@@ -8,6 +8,7 @@
 ## Only C
 1. [**Lucky 7 Game**](https://github.com/tbhaxor/educational_projects/tree/master/C/LUCKY_7)
 2. [**Galaga type Game**](https://github.com/vkoshti/Galaga)
+3. [**Snake Game**](https://github.com/mahir1010/Snake_0.2)
 
 ## C and File Handling
 1. [**Cafeterial Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/C_AND_FILE_HANDLING/CAFETERIA_ODERING_PROGRAM)
