@@ -7,6 +7,7 @@
 
 ## Only C
 1. [**Lucky 7 Game**](https://github.com/tbhaxor/educational_projects/tree/master/C/LUCKY_7)
+2. [**Galaga type Game**](https://github.com/vkoshti/Galaga)
 
 ## C and File Handling
 1. [**Cafeterial Management Program**](https://github.com/tbhaxor/educational_projects/tree/master/C_AND_FILE_HANDLING/CAFETERIA_ODERING_PROGRAM)
@@ -22,6 +23,9 @@
 
 ## Core Java
 1. [**Snake Game using Applets**](https://github.com/tbhaxor/educational_projects/tree/master/CORE_JAVA/SNAKE_GAME)
+2. [**Snake Level Editor**](https://github.com/mahir1010/Snake_Level_Editor)
+3. [**IntraChat**](https://github.com/vkoshti/IntraChat)
+
 ## HTML and Javascript
 1. [**String Encoding and Decoding Program**](https://github.com/tbhaxor/educational_projects/tree/master/HTML_AND_JAVASCRIPT/ENCODING_AND_DECODING_PROGRAM)
 
@@ -35,6 +39,10 @@
 
 ## BASH  
 1. [**File Manager**](https://github.com/tbhaxor/educational_projects/tree/master/SIMPLE_BASH/FILE_MANAGER)
+
+## Lua + Love2d
+1. [**Space-War**](https://github.com/bhattsameer/Space-War)
+
 
 # Want to contribute ?
 Read [CONTRIBUTING.md](https://github.com/tbhaxor/educational_projects/blob/master/CONTRIBUTING.md)
