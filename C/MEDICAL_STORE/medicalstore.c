@@ -2,6 +2,11 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+// CONFIG
+#define NAME "JAPSIMRAN"
+#define INSTITUTION "CGC"
+#define SUBMITTED_TO "Mr. Amit Verma"
+
 struct Medicine
 { //Base structure for medicine system
     int id, price, quantity;
@@ -14,8 +19,10 @@ void KnowInfoAboutMedicine(int number);
 void AddMedicineinStore(int number, struct Medicine m[]);
 void DeleteMedicineStore(int number);
 void ChangeMedicineDetails(int number);
+void info();
 main()
 {
+    info(); // info of the
     int i, j, choice, number = 0, c;
     for (i = 0; i < 100; i++)
     {
@@ -431,5 +438,19 @@ void ChangeMedicineDetails(int number)
 
             break;
         }
+    }
+}
+
+void info()
+{
+    printf("=============================\n");
+    printf("=== MEDICAL STORE PROGRAM ===\n");
+    printf("=============================\n\n");
+    printf("Coded By: %s\nInstitution Name: %s\nSubmitted To: %s\n\n", NAME, INSTITUTION, SUBMITTED_TO);
+    printf("Press Any To Continue");
+    getchar();
+    if (system("clear") != 0)
+    {
+        system("cls");
     }
 }
