@@ -2,7 +2,7 @@
 1. Don't commit changes to _master_ branch, rather check _How to Work as a Contributor_ [here](#how-to-work-as-a-contributor)
 2. Add subdirectories if same code has different implementations with same dependencies and language
 3. README.md file must exists in every directory (not subdirectories if exists) like [this](https://github.com/tbhaxor/educational_projects/blob/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT_PROGRAM/README.md)
-4. Projects without commenting and readme will not be merged
+4. _OPTIONAL_: Code must be commented
 5. Projects should be added in correct path
 
 # How to Work as a Contributor
