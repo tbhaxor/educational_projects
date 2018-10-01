@@ -1,5 +1,5 @@
-# Student management program in python3 and mysql
-This contains three type of programs with same db type i.e `mysql` but diffrent way of implementation
+# Student management
+This contains two type of programs with same db type i.e `mysql` but diffrent way of implementation
 ## Requirements
 * Python 3.x
 * Mysql Server
@@ -16,10 +16,10 @@ This contains three type of programs with same db type i.e `mysql` but diffrent 
 
 ## Screen Shot
 ### CLI VERSION
-![SS](https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT_IN_PYTHON/Student_Management_I/SS.PNG)
+![s](https://github.com/tbhaxor/educational_projects/blob/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT_PROGRAM/Student_Management_I/SS.PNG)
 
 ### GUI VERSION
-![SS](https://raw.githubusercontent.com/tbhaxor/school_college_projects/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT_IN_PYTHON/Student_Management_II/SS.PNG)
+![SS](https://github.com/tbhaxor/educational_projects/blob/master/PYTHON_AND_MYSQL/STUDENT_MANAGEMENT_PROGRAM/Student_Management_II/SS.PNG)
 
 # What is different in these 2 projects?
 | Project | Key Feature|
