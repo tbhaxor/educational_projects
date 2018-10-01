@@ -41,4 +41,4 @@ program
 
 
 # Screen Shots
-![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/C++_AND_FILE_HANDLING/COMPANY_MANAGEMENT_PROGRAM/ss.PNG)
+![SS](https://github.com/tbhaxor/educational_projects/blob/master/CPP_AND_FILE_HANDLING/COMPANY_MANAGEMENT_PROGRAM/ss.PNG)
