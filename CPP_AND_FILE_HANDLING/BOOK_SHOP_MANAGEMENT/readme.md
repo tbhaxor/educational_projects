@@ -39,4 +39,4 @@ program
 ```
 
 # Screen Shots
-![SS](https://raw.githubusercontent.com/tbhaxor/educational_projects/master/C++_AND_FILE_HANDLING/BOOK_SHOP_MANAGEMENT_IN_CPP/SS.PNG)
+![SS](https://github.com/tbhaxor/educational_projects/blob/master/CPP_AND_FILE_HANDLING/BOOK_SHOP_MANAGEMENT/SS.PNG)
