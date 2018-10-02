@@ -17,18 +17,14 @@ int main()
             deleteOld(); // calling function to delete order
             break;
         case 3:
-            clear();  // clearing output screen
-            modify(); // calling function to modify an order
-            break;
-        case 4:
             clear();   // clearing output screen
             showall(); // calling function to show all order
             break;
-        case 5:
+        case 4:
             clear();  // clearing output screen
             search(); // calling function to search an order
             break;
-        case 6:
+        case 5:
             return 0; // exiting of option selected 6
         default:
             printf("Invalid Input");
