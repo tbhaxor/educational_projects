@@ -1,6 +1,6 @@
-[submodule "djvue"]
-	path = VUEJS_AND_DJANGO
-	url = https://github.com/amustaque97/Vue-Django
+#[submodule "djvue"]
+#	path = VUEJS_AND_DJANGO
+#	url = https://github.com/amustaque97/Vue-Django
 [submodule "VUEJS_AND_DJANGO/TODO_LIST_APP"]
-	path = VUEJS_AND_DJANGO/djvue
+	path = VUEJS_AND_DJANGO/TODO_LIST_APP
 	url = https://github.com/amustaque97/Vue-Django
