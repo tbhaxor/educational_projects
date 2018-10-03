@@ -14,7 +14,7 @@ It is a Java based GUI system which is having Swing class for GUI  and also havi
 ```
 
 
-+ To run the program :
+# To run the program :
 ```
 + Click on Run button in Netbeans
 ```
