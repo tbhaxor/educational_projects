@@ -9,12 +9,8 @@ It is a Java based GUI system which is having Swing class for GUI  and also havi
 + Install Netbeans
 + Add jdbc driver
 + Add jtatto, jcalander and rs2xml jar files
-
 + Open project in Netbeans
-```
 
-
-+ To run the program :
-```
+# HOW TO RUN:
 + Click on Run button in Netbeans
 ```
