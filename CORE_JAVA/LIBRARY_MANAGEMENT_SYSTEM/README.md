@@ -13,4 +13,3 @@ It is a Java based GUI system which is having Swing class for GUI  and also havi
 
 # HOW TO RUN:
 + Click on Run button in Netbeans
-```
