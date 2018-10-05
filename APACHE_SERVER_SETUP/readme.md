@@ -1,4 +1,4 @@
-#Apache Web Server
+# Apache Web Server
 Bash Script for Apache Web Server Setup 
 # Requirements
 + Linux OS (RHEL 7, CentOs 7, Fedora 7) 
