@@ -11,6 +11,28 @@
 
 <body>
     {{{ body }}}
+    <div class="container" style="margin-top: 30px">
+        {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        {{/if}}
+        {{#if success}}
+        <div class="alert alert-success" role="alert">
+            {{success}}
+        </div>
+        {{/if}}
+        {{#if info}}
+        <div class="alert alert-info" role="alert">
+            {{info}}
+        </div>
+        {{/if}}
+        {{#if warning}}
+        <div class="alert alert-warning" role="alert">
+            {{warning}}
+        </div>
+        {{/if}}
+    </div>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/fa-all.min.js"></script>

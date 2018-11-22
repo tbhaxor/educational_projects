@@ -1,31 +1,11 @@
 <style>
-    .error {
-        margin: 0 auto;
-        text-align: center;
+    label{
+        font-weight: bold;
     }
-
-    .error-code {
-        bottom: 60%;
-        color: #2d353c;
-        font-size: 96px;
-        line-height: 100px;
-    }
-
-    .error-desc {
-        font-size: 12px;
-        color: #647788;
-    }
-
-    .m-b-10 {
-        margin-bottom: 10px !important;
-    }
-
-    .m-b-20 {
-        margin-bottom: 20px !important;
-    }
-
-    .m-t-20 {
-        margin-top: 20px !important;
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -43,7 +23,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="about(this)">About</a>
             </li>
-
             {{#if logged}}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true"
@@ -64,18 +43,31 @@
         </ul>
     </div>
 </nav>
-<div class="error">
-    <div class="error-code m-b-10 m-t-20">404 <i class="fa fa-warning"></i></div>
-    <h3 class="font-bold">We couldn't find the page..</h3>
-
-    <div class="error-desc">
-        Sorry, but the page you are looking for was either not found or does not exist. <br />
-        Try refreshing the page or click the button below to go back to the Homepage.
-        <div>
-            <a class=" login-detail-panel-button btn" href="/">
-                <i class="fa fa-arrow-left"></i>
-                Go back to Homepage
-            </a>
+<div class="container" style="margin-top: 25px">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="quantity" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price" class="form-control" pattern="^\d*(\.\d{0,2})?$">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-block btn-success btn">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
+
 </div>
