@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Schema Example</title>
+    <style>
+      input{
+        display: block;
+        font-size: 24px;
+        height: 36px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <input type="text" name="string" placeholder="string">
+      <input type="number" name="number" placeholder="number">
+      <input type="text" name ="email" placeholder="email">
+      <input type="text" name="longstring" placeholder="At least 6 characters">
+
+      <!-- Uncomment me to show how date works-->
+      <!-- <input type="date" name="date"> -->
+
+      <input type="submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+body {
+  background-color: #6a5;
+}
+
+table,
+td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+table {
+  width: 500px;
+  background-color: antiquewhite;
+}
+
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.active {
+  color: red;
+}

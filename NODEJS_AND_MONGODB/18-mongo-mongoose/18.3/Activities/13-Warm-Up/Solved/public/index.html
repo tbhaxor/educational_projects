@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Book Tracker</title>
+    <style>
+      #unread, #read {
+        width: 40%;
+        background-color: antiquewhite;
+      }
+      #unread { float: left; }
+      #read { float: right; }
+      table, td {
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+      }
+      #wrapper {
+        width: 960px;
+        padding-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      body {
+        font-family: sans-serif;
+        background-color: #C0FFEE;
+      }
+      #results { margin-top: 50px; }
+      #userinput { font-size: 24px; }
+      input {
+        width: 50%;
+        height: 36px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Book Tracker 4000</h1>
+      <h2><i>The latest and greatest in book tracking technology!</i></h2>
+      <form id="userinput">
+          <input type="text" id="title" placeholder="Book Title"/>
+        <br />
+          <input type="text" id="author" placeholder="Book Author"/>
+        <br />
+        <button type="submit" id="addbook">Add New</button>
+      </form>
+      <div id="results">
+        <table id="unread">
+              <tr><th>Title</th><th>Author</th><th>Read/Unread</th></tr>
+        </table>
+        <table id="read">
+              <tr><th>Title</th><th>Author</th><th>Read/Unread</th></tr>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

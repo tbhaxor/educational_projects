@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      input {
+        display: block;
+        height: 36px;
+        font-size: 24px;
+        margin: 5px
+      }
+      </style>
+  </head>
+  <body>
+    <h1>Enter a book into the library</h1>
+    <form action="/submit" method="post">
+      <input type="text" name="author" placeholder="author">
+      <input type="text" name="title" placeholder="title">
+
+      <input type="submit">
+      <a href="/books">See your books!</a>
+      <a href="/library">See your library!</a>
+      <a href="/populated">See your library, populated with books!</a>
+    </form>
+  </body>
+</html>
